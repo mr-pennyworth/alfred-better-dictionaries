@@ -558,13 +558,13 @@ The extra pane needs these permissions for:
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>.setup-better-english-dictionary</string>
+				<string>.setup-better-dictionaries</string>
 				<key>subtext</key>
-				<string>.setup-better-english-dictionary</string>
+				<string>.setup-better-dictionaries</string>
 				<key>text</key>
-				<string>Setup Better English Dictionary</string>
+				<string>Setup Better Dictionaries</string>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
@@ -576,7 +576,7 @@ The extra pane needs these permissions for:
 	</array>
 	<key>readme</key>
 	<string>### Setup:
-After importing, first type `.setup-better-english-dictionary`
+After importing, first type `.setup-better-dictionaries`
 into alfred (without the quotes)
 
 
@@ -720,7 +720,7 @@ Subsequent searches should be snappy
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/mr-pennyworth/alfred-better-dictionaries</string>
 </dict>
