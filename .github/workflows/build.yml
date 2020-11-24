@@ -34,7 +34,7 @@ jobs:
         run: unzip AlfredExtraPane.app.zip
 
       - name: Build Workflow
-        run: python mkworkflow.py
+        run: python3 mkworkflow.py
 
       - name: Get Workflow Filename
         run: echo "WF_FILENAME=$(ls *.alfredworkflow)" >> $GITHUB_ENV
