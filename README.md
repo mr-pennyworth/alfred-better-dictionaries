@@ -48,7 +48,7 @@ is automatically created into the workflow editor.
  - This allows you to assign hotkeys and keywords for specific dictionaries.
    For example, below you can see how I have manually assigned keywords
    `thesaurus` and `defn` to the thesaurus and dictionary respectively.
-   In addition, I can trigger the dictionary search using `⌃⌥⌘D`.
+   In addition, I can trigger the dictionary search using `⌃⌥⌘D`.  
    ![](images/example-assignment.png)
 
 
@@ -74,7 +74,7 @@ any hotkeys/keywords, follow this:
    Subsequent searches should be instant.
 
  - This workflow takes a LOT of space on disk. Take a look at the comparison:
-   ```md
+   ```markdown
    # Built-in dictionaries
    Oxford American Writer's Thesaurus:  7 MB
    New Oxford American Dictionary:     36 MB
