@@ -2,6 +2,8 @@
 Better search and live previews for built-in macOS dictionaries.
 
 ### Features
+ - IPA (phonetic) pronunciations:
+   Press `⌘↩` to hear the pronunciation.
  - In-Alfred live previews with colors that
    automatically adapt to Alfred's theme:
    ![](images/auto-theme.png)
