@@ -1,0 +1,10 @@
+*.pyc
+*~
+*.log
+*.alfredworkflow
+__pycache__
+dist
+build
+wfbuild
+AlfredExtraPane.app
+BetterDict.app

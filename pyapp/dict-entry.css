@@ -1,0 +1,2688 @@
+:root
+{
+    --secondary-label: var(--result-subtext-color, #eee);
+    --text: var(--search-text-color, #eee);
+    --link: var(--result-text-colorSelected, var(--link));
+}
+
+html
+{
+    background-color: var(--window-color, #1d1e28);
+    color: var(--search-text-color, #eee);
+}
+
+body
+{
+    font-size: 12pt;
+    font: -apple-system-body;
+    font-family: -apple-system;
+    margin-left: 0.9em;
+    margin-right: 0.9em;
+    margin-top: 1.0em;
+    margin-bottom: 1.5em;
+    /* filter: invert(100%); */
+}
+
+html.apple_client-panel body
+{
+    margin-top: 0em;
+}
+
+@media (prefers-color-scheme: dark)
+{
+    img
+    {
+        filter: invert(100%);
+    }
+}
+
+
+a
+{
+    color: var(--link);
+    text-decoration: none;
+}
+
+
+
+
+a:hover
+{
+    color: var(--link);
+    text-decoration: underline;
+}
+
+html.apple_client-panel a,
+html.apple_client-panel a:hover
+{
+    color: var(--text);
+    text-decoration: none;
+}
+
+table
+{
+    table-layout: fixed;
+    width: 90%;
+    margin-top: 1em;
+    margin-left: 14px;	/*if indent 30px*/
+    border-style: solid;
+    border-width: 1px;
+    font-weight: normal;
+}
+
+caption
+{
+    font-size: 80%;
+    margin-bottom: 0.5em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+tr
+{
+    /* font-size: 80%; */
+    width: 30%;
+    -webkit-hyphens: auto;
+}
+
+td
+{
+}
+
+
+/* OSX */
+
+span[class="image"],
+.image
+{
+    display: block;
+    margin-top: 0.4em;
+    margin-left: 1em;
+}
+
+img[class='map']
+{
+    width: 100%;
+    margin-top: 1em;
+}
+
+div[class='lineart']
+{
+    float: right;
+    padding: 1em 0em 0.5em 1.5em;
+    background-color: transparent;
+}
+
+div[class='lineart']	{ max-width: 33%;}
+div[class='lineart'][layout='Third']	{ max-width: 33%;}
+div[class='lineart'][layout='Half']	{ max-width: 33%;}
+div[class='lineart'][layout='Two-thirds']	{ max-width: 33%;}
+div[class='lineart'][layout='One']		{ max-width: 33%;}
+div[class='lineart'][layout='Two']		{ max-width: 33%;}
+div[class='lineart'][layout='THree']	{ max-width: 33%;}
+div[class='lineart'][layout='Full Page']	{ max-width: 33%;}
+div[class='lineart'][layout='Two Pages']	{ max-width: 33%;}
+div[class='lineart'] img { width: 100%;}
+div[class='lineart'] div { display: block; text-align: center; font-weight: 600; font-size: 80%; }
+
+html.apple_client-panel div.lineart
+{
+    display: none;
+}
+
+/* */
+html.apple_client-panel img
+{
+    display: none;
+}
+
+/* iOS */
+/*
+div.lineart
+{
+  display: none;
+}
+*/
+/* */
+
+img.gi,
+html.apple_client-panel img.gi
+{
+    display: inline;
+}
+
+
+/*=====================================*/
+/* content                             */
+/*=====================================*/
+
+span.hsb:before
+{
+    /* '•' */
+    content: '\2022';
+    font-size: 80%;
+    vertical-align: 3%;
+}
+
+span.wbb:before
+{
+    /* ' | ' */
+    content: '\a0\7c\a0';
+    font-size: 70%;
+    vertical-align: 5%;
+    color: var(--secondary-label);
+    margin-left: -0.15em;
+    margin-right: -0.15em;
+}
+
+/*=====================================*/
+/* stress                              */
+/*=====================================*/
+
+span.ph.t_stress span.str.t_l
+{
+    text-decoration: underline;
+}
+span.ph.t_stress span.str.t_s
+{
+    text-decoration: none;
+}
+
+
+
+/*=====================================*/
+/* layout                              */
+/*=====================================*/
+
+*.entry
+{
+    display: block;
+    font-size: 84%;
+    margin-bottom: 1em;
+    line-height: 130%;
+}
+*.entry + *.entry
+{
+    margin-top: 4em;
+}
+
+
+/*=====================================*/
+/* xh                                  */
+/*=====================================*/
+
+*.entry > span.x_xh0
+{
+    display: block;
+    margin-bottom: 0.6em;
+}
+
+html.apple_client-panel *.entry > span.x_xh0
+{
+    margin-bottom: 0.1em;
+}
+
+span.x_xh1
+{
+    display: block;
+    /*
+  margin-left: 2.2em;
+  margin-top: 1em;
+   */
+    margin-top: 0.6em;
+    margin-bottom: 0.4em;
+}
+html.apple_client-panel span.x_xh1
+{
+    margin-top: 0.1em;
+}
+span.x_xh1 + span.x_xh1
+{
+    margin-top: 0.4em;
+    margin-left: 1.0em;
+}
+html.apple_client-panel span.x_xh1 + span.x_xh1
+{
+    margin-top: 0.1em;
+}
+
+*.entry > span.x_xh0 + span.x_xd0,
+*.entry > span.x_xh0 + span.sg
+{
+    margin-top: 0.6em;
+}
+html.apple_client-panel *.entry > span.x_xh0 + span.x_xd0,
+html.apple_client-panel span.x_xd0
+{
+    margin-top: 0.1em;
+}
+
+
+/*=====================================*/
+/* xd                                  */
+/*=====================================*/
+
+span.x_xd0
+{
+    display: block;
+    margin-top: 0.3em;
+    margin-bottom: 2.0em;
+}
+html.apple_client-panel span.x_xd0
+{
+    margin-top: 0.1em;
+    margin-bottom: 0.4em;
+}
+
+/*
+span.x_xd0.hasSn,
+*/
+span.x_xd0
+{
+    margin-left: 1.0em;
+}
+span.x_xd0 > span.x_xdh
+{
+    display: block;
+    margin-left: -0.8em;
+    margin-bottom: 0.5em;
+    font-size: 120%;
+    line-height: 120%;
+}
+html.apple_client-panel span.x_xd0 > span.x_xdh
+{
+    font-size: 100%;
+    line-height: 100%;
+    margin-bottom: 0.1em;
+}
+/*
+html.apple_client-panel span.x_xd0
+{
+  margin-left: 0em;
+}
+html.apple_client-panel span.x_xd0 > span.x_xdh
+{
+  margin-left: 0em;
+*/
+
+span.x_xd0.hasSn > span.x_xdh > span.sn
+{
+    /*
+  margin-right: 0.0em;
+   */
+    margin-right: 0.2em;
+}
+
+/* ---- */
+/*
+span.x_xd0.hasSn
+{
+  margin-left: 2.0em;
+  text-indent: 0em;
+}
+span.x_xd0 > span.sn,
+span.x_xd0 > span.x_xdh > span.sn
+{
+  margin-left: -1em;
+  margin-right: 0.0em;
+}
+*/
+/* ---- */
+
+span.x_xd1
+{
+    display: block;
+    margin-top: 0.3em;
+    margin-bottom: 0.7em;
+    
+    margin-left: 0em;
+    /* bilingual */
+/*
+  margin-left: 1.0em;
+*/
+}
+html.apple_client-panel span.x_xd1
+{
+    margin-top: 0.1em;
+    margin-bottom: 0.3em;
+}
+span.x_xd1.hasSn
+{
+    margin-left: 1.0em;
+    text-indent: 0em;
+}
+span.x_xd1 > span.sn,
+span.x_xd1 > span.x_xdh > span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.0em;
+}
+
+span.x_xd1 > span.x_xd2:first-child	/* bilingual */
+{
+    /*margin-left: -1.2em;*/
+    /*
+  text-indent: -1.0em;
+   */
+}
+span.x_xd1 > span.x_xd2
+{
+}
+
+span.x_xd1 > span.x_xdh
+{
+    /*display: block;*/
+    margin-bottom: 0.5em;
+}
+span.x_xd1 > span.x_xdh.sn,
+span.x_xd1 > span.x_xdh > span.sn
+{
+    display: inline;
+    margin-right: 0.1em;
+}
+
+
+span.x_xd1sub
+{
+    display: block;
+}
+/* first x_xd1sub (just after sn) */
+span.x_xd1.hasSn span.x_xdh.sn + span.x_xd1sub
+{
+    display: inline;
+    margin-left: 0em;
+}
+/* first x_xd1sub.hasSn (just after sn) */
+span.x_xd1.hasSn span.x_xdh.sn + span.x_xd1sub.hasSn.t_first
+{
+    display: block;
+    margin-left: 1em;
+}
+span.x_xd1sub.hasSn
+{
+    margin-left: 1em;
+}
+span.x_xd1sub.hasSn span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.1em;
+}
+
+
+/*
+  xd2
+*/
+span.x_xd2
+{
+    display: block;
+    margin-left: 0em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+html.apple_client-panel span.x_xd2
+{
+    margin-top: 0.1em;
+    margin-bottom: 0.3em;
+}
+span.x_xd2.hasSn
+{
+    margin-left: 1.0em;
+}
+span.x_xd2.hasSn span.sn
+{
+    margin-left: -1.0em;
+    margin-right: 0.2em;
+}
+/*
+span.x_xd2 span.sn
+{
+  margin-left: -1em;
+  margin-right: 0.0em;
+}
+*/
+
+/* first x_xd2 (just after sn) */
+span.x_xd1.hasSn span.x_xdh.sn + span.x_xd2
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xd1.hasSn span.x_xdh.sn + span.x_xd2.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+span.x_xd2.hasSn span.x_xdh.sn + span.x_xd3
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xd2.hasSn span.x_xdh.sn + span.x_xd3.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+span.x_xd3.hasSn span.x_xdh.sn + span.x_xd4
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xd3.hasSn span.x_xdh.sn + span.x_xd4.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+span.x_xd4.hasSn span.x_xdh.sn + span.x_xd5
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xd4.hasSn span.x_xdh.sn + span.x_xd5.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+span.x_xd5.hasSn span.x_xdh.sn + span.x_xd6
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xd5.hasSn span.x_xdh.sn + span.x_xd6.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+
+
+span.x_xo3.hasSn span.x_xdh.sn + span.x_xo4
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xo3.hasSn span.x_xdh.sn + span.x_xo4.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+
+span.x_xo2.hasSn span.x_xoh.sn + span.x_xo3
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xo2.hasSn span.x_xoh.sn + span.x_xo3.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+span.x_xo3.hasSn span.x_xoh.sn + span.x_xo4
+{
+    display: inline;
+    margin-left: 0em;
+}
+span.x_xo3.hasSn span.x_xoh.sn + span.x_xo4.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+
+
+
+/*
+span.x_xd1 > span.x_xd2 > span.x_xdh
+{
+  color: red;
+  margin-left: -1em;
+}
+*/
+
+/*
+  xd0, xd1 - de
+  Cascading sn
+*/
+span.x_xd0.cHasSn.gcHasSn
+{
+    margin-left: 2.0em;
+}
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn.cHasSn
+{
+    margin-left: 1.2em;
+}
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn
+{
+    margin-left: 0em;
+}
+/*
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn:not(.cHasSn)
+{
+  margin-left: 0em;
+}
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn.cHasSn > span.sn
+{
+    margin-left: -2.2em;
+    margin-right: 2.3em;
+}
+/*
+  Cascading sn - end
+*/
+
+
+/*
+  new attr test
+  Cascading sn
+  Same to above
+*/
+/*
+span.x_xd0.cSn.gcSn
+{
+  margin-left: 2.2em;
+}
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn
+{
+  margin-left: 0em;
+}
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn.cSn
+{
+  margin-left: 1.4em;
+}
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn.cSn > span.sn
+{
+  margin-left: -3.4em;
+  margin-right: 2.5em;
+}
+*/
+
+
+/*
+  de
+  xdh contains sn and something.  (e.g. <lg>)
+  Need to add space between sn and something.
+*/
+span.x_xd1 span.x_xdh span.sn
+{
+    margin-right: 0.2em;
+}
+
+
+/*
+span.x_xd2.hasSn
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd2.hasSn,
+span.x_xd0.cSn.gcSn span.x_xd2.hasSn
+{
+    margin-left: 0em;
+}
+/*
+span.x_xd2.hasSn span.sn
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd2.hasSn span.sn,
+span.x_xd0.cSn.gcSn span.x_xd2.hasSn span.sn
+{
+    margin-left: -0.8em;
+    margin-right: 0.0em;
+}
+/*
+span.x_xd1.hasSn span.x_xd2.hasSn
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn span.x_xd2.hasSn,
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn span.x_xd2.hasSn
+{
+}
+
+/*
+span.x_xd1.hasSn span.x_xd2.hasSn span.sn
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn span.x_xd2.hasSn span.sn,
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn span.x_xd2.hasSn span.sn
+{
+    margin-left: -1.2em;
+    margin-right: 0.1em;
+}
+/*
+span.x_xd1.hasSn span.sn + span.x_xd2.hasSn span.sn
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn span.sn + span.x_xd2.hasSn span.sn,
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn span.sn + span.x_xd2.hasSn span.sn
+{
+    margin-left: -3.6em;
+    margin-right: 0.2em;
+}
+/* first x_xd2 (just after sn) */
+/*
+span.x_xd1.hasSn span.x_xdh.sn + span.x_xd2
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn span.x_xdh.sn + span.x_xd2,
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn span.x_xdh.sn + span.x_xd2
+{
+    display: inline;
+    margin-left: 0.0em;
+}
+/*
+span.x_xd1.hasSn span.x_xdh.sn + span.x_xd2.hasSn
+*/
+span.x_xd0.cHasSn.gcHasSn span.x_xd1.hasSn > span.x_xdh.sn + span.x_xd2.hasSn,
+span.x_xd0.cSn.gcSn span.x_xd1.hasSn > span.x_xdh.sn + span.x_xd2.hasSn
+{
+    display: inline;
+    margin-left: 1.4em;
+}
+/*
+ */
+span.x_xd1.hasSn span.x_xdh.sn + span.x_xd2.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+span.x_xo3.hasSn span.x_xdh.sn + span.x_xo4.hasSn
+{
+    display: block;
+    margin-left: 1.0em;
+}
+
+
+/* de: lg + msDict */
+/*
+span.x_xd1 > span.x_xdh + span.x_xd2
+*/
+/*
+span.x_xd1 > span.x_xdh + span.x_xd2.t_first
+{
+  display: inline;
+}
+*/
+span.x_xd1 > span.sn + span.x_xd2.t_first
+{
+    margin-left: 1.2em;
+}
+span.x_xd1 > span.x_xdh > span.sn + span.x_xo0,
+span.x_xd2 > span.x_xdh > span.sn + span.x_xo0
+{
+    display: inline;
+}
+
+
+/*
+  x_xd2sub
+*/
+span.x_xd2sub
+{
+    display: block;
+}
+span.x_xd2sub.hasSn
+{
+    margin-left: 1em;
+}
+span.x_xd2sub.hasSn span.sn
+{
+    margin-left: -0.9em;
+    margin-right: 0.1em;
+}
+/* first x_xd2sub (just after sn) */
+span.x_xd2.hasSn span.x_xdh.sn + span.x_xd2sub
+{
+    display: inline;
+    margin-left: 0.2em;
+}
+
+
+/*
+  xd3
+*/
+span.x_xd3
+{
+    display: block;
+    margin-left: 0em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+span.x_xd3.hasSn
+{
+    margin-left: 1.0em;
+}
+span.x_xd3.hasSn span.sn
+{
+    margin-left: -1.0em;
+}
+
+/*
+  xd4
+*/
+span.x_xd4
+{
+    display: block;
+    margin-left: 0em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+span.x_xd4.hasSn
+{
+    margin-left: 1.0em;
+}
+span.x_xd4.hasSn span.sn
+{
+    margin-left: -1.0em;
+}
+
+/*
+  xd5
+*/
+span.x_xd5
+{
+    display: block;
+    margin-left: 0em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+span.x_xd5.hasSn
+{
+    margin-left: 1.0em;
+}
+span.x_xd5.hasSn span.sn
+{
+    margin-left: -1.0em;
+}
+
+/*
+  xd6
+*/
+span.x_xd6
+{
+    display: block;
+    margin-left: 0em;
+    margin-bottom: 0.2em;
+}
+span.x_xd6.hasSn
+{
+    margin-left: 1.0em;
+}
+span.x_xd6.hasSn span.sn
+{
+    margin-left: -1.0em;
+}
+
+
+
+
+
+/*=====================================*/
+/* xo                                  */
+/*=====================================*/
+
+span.x_xo0
+{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0em;
+}
+html.apple_client-panel span.x_xo0
+{
+    margin-top: 0.1em;
+    margin-bottom: 0.2em;
+}
+*.entry > span.x_xo0
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+html.apple_client-panel *.entry > span.x_xo0
+{
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+span.x_xdt > span.x_xo0
+{
+    margin-bottom: 1em;
+}
+
+span.x_xo0 > span.x_xoLblBlk
+{
+    display: block;
+    font-variant: small-caps;
+    font-size: 90%;
+    display: block;
+    padding-bottom: 0.3em;
+    border-bottom: solid thin -apple-system-tertiary-label;
+    color: var(--secondary-label);
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+html.apple_client-panel span.x_xo0 > span.x_xoLblBlk
+{
+    margin-top: 1em;
+}
+
+div.xrgBlock.x_xoLblBlkTop,
+span.x_xo0.x_xoLblBlkTop
+{
+    margin-top: 3em;
+    border-top: solid thin -apple-system-tertiary-label;
+    margin-bottom: 1em;
+}
+html.apple_client-panel div.xrgBlock.x_xoLblBlkTop,
+html.apple_client-panel span.x_xo0.x_xoLblBlkTop
+{
+    margin-top: 1em;
+}
+div.xrgBlock.x_xoLblBlkTop > span.label,
+span.x_xo0.x_xoLblBlkTop > span.label
+{
+    display: block;
+    margin-top: 1em;
+}
+html.apple_client-panel div.xrgBlock.x_xoLblBlkTop > span.label,
+html.apple_client-panel span.x_xo0.x_xoLblBlkTop > span.label
+{
+    margin-top: 0.5em;
+}
+
+div.xrgBlock span.xrgs
+{
+    display: block;
+    margin-left: 2em;
+}
+div.xrgBlock span.xrgs span.xrg
+{
+    display: block;
+}
+
+span.x_xo1
+{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0em;
+}
+html.apple_client-panel span.x_xo1
+{
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+span.x_xd0 > span.x_xo0
+{
+    margin-left: -1em;
+}
+
+span.x_xo0.note
+{
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+}
+
+
+/* IT */
+span.x_xd0 > span.x_xo1
+{
+    margin-left: 0em;
+}
+span.x_xd0 > span.x_xo1.hasSn
+{
+    padding-left: 1em;
+}
+span.x_xd0 > span.x_xo1.hasSn span.sn
+{
+    margin-left: -0.9em;
+}
+
+/* ES */
+span.x_xd2.msDict > span.synGroup
+{
+    display: block;
+}
+
+/* NL */
+span.x_xd1sub + span.x_xo0
+{
+    margin-top: 0.8em;
+}
+
+
+/* DE : idiom in sense block */
+/*
+span.x_xd0 span.x_xd2 span.x_xo1
+{
+  margin-left: 0em;
+  margin-top: 0.4em;
+}
+span.x_xd0 span.x_xd2 span.x_xo1 span.x_xo2
+{
+  display: inline;
+}
+span.x_xd0 span.x_xd2 span.x_xo1 span.x_xoh + span.x_xo2
+{
+  margin-left: 0.6em;
+}
+*/
+
+span.x_xo1
+{
+    display: block;
+    margin-left: 1em;
+    /*margin-bottom: 0.8em;*/
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+html.apple_client-panel span.x_xo1
+{
+    margin-bottom: 0.3em;
+}
+/* subEntry in Definition */
+span.x_xd1 span.x_xo1
+{
+    margin-left: 0em;
+}
+
+span.x_xo2
+{
+    display: block;
+    margin-left: 1em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+/*
+span.x_xd1 span.x_xo2
+{
+  margin-left: 0em;
+}
+*/
+span.x_xo2.hasSn
+{
+    margin-left: 2em;
+}
+span.x_xo2.hasSn > span.sn,
+span.x_xo2.hasSn >span.x_xdh > span.sn,
+span.x_xo2.hasSn >span.x_xoh > span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.2em;
+}
+
+span.x_xo2sub
+{
+    display: block;
+}
+/* first x_xo2sub (just after sn) */
+span.x_xo2.hasSn span.x_xoh.sn + span.x_xo2sub
+{
+    display: inline;
+    margin-left: 0.1em;
+}
+span.x_xo2sub.hasSn
+{
+    margin-left: 1em;
+}
+span.x_xo2sub.hasSn span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.1em;
+}
+
+span.x_xo2.hasSn span.x_xdh.sn + span.x_xo3,
+span.x_xo2.hasSn span.x_xdh.sn + span.x_xo3 > span.x_xo4.trg:first-child
+{
+    /* AR-EN */
+    display: inline;
+    margin-left: 0em;
+}
+
+span.x_xo3
+{
+    display: block;
+    /*
+  margin-left: 1em;
+   */
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+span.x_xo3.hasSn
+{
+    margin-left: 1em;
+}
+span.x_xo3.hasSn > span.sn,
+span.x_xo3.hasSn > span.x_xoh > span.sn,
+span.x_xo3.hasSn > span.x_xdh > span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.2em;
+}
+
+span.x_xo4
+{
+    display: block;
+    /*
+  margin-left: 1em;
+   */
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+span.x_xo4.hasSn
+{
+    margin-left: 1em;
+}
+span.x_xo4.hasSn span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.1em;
+}
+
+span.x_xo5
+{
+    display: block;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+span.x_xo5.hasSn
+{
+    margin-left: 1em;
+}
+
+span.x_xo5.hasSn span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.1em;
+}
+
+/* first x_xo5 (just after sn) */
+span.x_xo4.hasSn > span.x_xoh.sn + span.x_xo5
+{
+    display: inline;
+    margin-left: 0em;
+}
+
+span.x_xo6
+{
+    display: block;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+span.x_xo6.hasSn
+{
+    margin-left: 1em;
+}
+span.x_xo6.hasSn span.sn
+{
+    margin-left: -1em;
+    margin-right: 0.1em;
+}
+
+
+
+/*=====================================*/
+/* Hide                                */
+/*=====================================*/
+
+/* ▶ */
+span.x_xd1 > span.x_xdh > span.gp.tg_se1
+{
+    display: none;
+}
+
+span.construction	{ display: none; }
+
+span.cdf	{ display: none; }
+
+span.domClass	{ display: none; }
+span.semClass	{ display: none; }
+span.encClass	{ display: none; }
+
+span.morphSet	{ display: none; }
+
+span.meta		 { display: none; }
+
+/* 
+span.hg span.gg.t_wordbreak
+{
+  display: none;
+}
+
+span.hg > span.lg 
+{
+  display: none;
+}
+
+span.hg > span.hw + span.posg
+{
+  display: none;
+}
+*/
+
+
+
+/*=====================================*/
+/* Style                               */
+/*=====================================*/
+
+
+/*=====================================*/
+/* hw                                  */
+/*=====================================*/
+
+span.hg span.hw,
+span.hg span.vg,
+span.hwg span.hw,
+span.ehw,
+span.vhw,
+/* span.hwg span.hvg span.hv, */
+span.hwg span.hvg,
+span.hg span.gp.t_hw
+{
+    font-size: 170%;
+    font-weight: normal;
+    line-height: 150%;
+    /*
+  line-height: 130%;
+   */
+    -webkit-hyphens: auto;
+}
+span.hvg > span.hm
+{
+    font-size: 59%;
+}
+html.apple_client-panel span.hvg > span.hm
+{
+    font-size: 80%;
+}
+span.hg > span.hgSub1 span.vg
+{
+    font-size: 100%;
+}
+span.hg span.vg.x_weak,
+span.hg span.vg.x_weak span.v
+{
+    font-size: 100%;
+    color: var(--secondary-label);
+}
+
+span.gramb span.hvg span.hv
+{
+    font-weight: 600;
+}
+span.x_xh0 span.vg
+{
+    font-weight: 200;
+    color: var(--secondary-label);
+}
+
+span.x_xh0 span.vg span.v
+{
+    font-weight: normal;
+    color: var(--text);
+}
+span.x_xh0 span.vg span.t_label
+{
+    font-weight: normal;
+}
+
+span.hwg span.frmg span.frm
+{
+    font-weight: normal;
+    font-size: 170%;
+}
+span.hwg span.hvg span.frmg span.frm
+{
+    font-size: 100%;
+}
+span.frm_type
+{
+    font-weight: normal;
+}
+span.hwg span.frmg span.gr,
+span.hwg span.frmg span.gp.tg_frmg
+{
+    font-size: 150%;
+}
+span.hwg span.hvg span.frmg span.gr,
+span.hwg span.hvg span.frmg span.gp.tg_frmg
+{
+    font-size: 100%;
+}
+span.hwg span.frmg span.gp.tg_frmg,
+span.hwg span.infg span.gp.tg_infg,
+span.hwg span.infg span.gp.tg_inf,
+span.hw span.gp.tg_hw,
+span.hvg span.hv span.gp.tg_hv
+{
+    color: var(--secondary-label);
+}
+
+/*
+span.hw ~ span.posg,
+span.vg ~ span.posg
+{
+  display: block;
+  font-size: 120%;
+  margin-top: 0.0em;
+  margin-bottom: 0.2em;
+}
+span.alt-hg span.hw ~ span.posg, 
+span.alt-hg span.vg ~ span.posg
+{
+  font-size: 100%;
+}
+html.apple_client-panel span.hw ~ span.posg,
+html.apple_client-panel span.vg ~ span.posg
+{
+  font-size: 100%;
+}
+*/
+
+span.x_xd1 > span.posg.x_xdh,
+span.x_xd1 > span.x_xdh > span.posg:first-child
+{
+    font-size: 120%;
+}
+html.apple_client-panel span.x_xd1 > span.posg.x_xdh
+{
+    font-size: 110%;
+}
+
+html.apple_client-panel span.hg span.hw,
+html.apple_client-panel span.hg span.vg,
+html.apple_client-panel span.hwg span.hw,
+html.apple_client-panel span.ehw,
+html.apple_client-panel span.vhw,
+/* html.apple_client-panel span.hwg span.hvg span.hv, */
+html.apple_client-panel span.hwg span.hvg,
+html.apple_client-panel span.hg span.gp.t_hw,
+html.apple_client-panel span.hwg span.frmg span.frm,
+html.apple_client-panel span.hwg span.frmg span.gr,
+html.apple_client-panel span.hwg span.frmg span.gp.tg_frmg
+{
+    font-size: 120%;
+    line-height: 130%;
+}
+
+span.hg span.fg
+{
+    font-size: 150%;
+}
+html.apple_client-panel span.hg span.fg
+{
+    font-size: 100%;
+}
+
+span.hg span.fg span.f	{ font-weight: normal; }
+span.hg span.fg span.sy	{ font-style: italic; }
+
+span.fhw
+{
+    font-weight: 500;
+    font-style: italic;
+}
+
+span.hm
+{
+    vertical-align: super;
+}
+span.gp.ty_hom,
+span.xr span.hm
+{
+    vertical-align: super;
+    font-size: 70%;
+}
+span.hg > span.gp.ty_hom
+{
+    font-size: 120%;
+    vertical-align: 50%;
+}
+html.apple_client-panel span.hg > span.gp.ty_hom
+{
+    font-size: 100%;
+    vertical-align: super;
+}
+/*
+span.hg span.xrg
+{
+  display: block;
+}
+span.hg span.pr span.xrg
+{
+  display: inline;
+}
+*/
+
+/*
+span.varGrp,
+span.vGrp
+{
+  font-weight:normal;
+}
+
+span.hg span.pr + span.vg
+{
+  margin-left: 1em;
+}
+span.v						{font-weight: 600;}
+span.v[highlight="true"] 	{font-style: italic;}
+span.v[highlight="false"]	{font-weight: 600;}
+*/
+
+
+/* hgSub1 */
+
+span.hg > span.hgSub1
+{
+    font-size: 110%;
+    margin-left: 0.1em;
+}
+html.apple_client-panel span.hg > span.hgSub1
+{
+    font-size: 100%;
+}
+
+span.hg > span.hgSub1 span.alt-hg span.hw
+{
+    display: block;
+    font-size: 144%;
+    margin-top: 0.3em;
+}
+html.apple_client-panel span.hg > span.hgSub1 span.alt-hg span.hw
+{
+    margin-top: 0.3em;
+    font-size: 111%;
+}
+span.hg > span.hgSub1 span.posg,
+span.hwg > span.hgSub1 span.ps
+{
+    font-size: 110%;
+}
+span.hg > span.hgSub1 span.pr,
+span.hg > span.hgSub1 span.prx
+{
+    font-size: 100%;
+}
+span.hgSub1 > span.etym,
+span.hgSub1 > span.grnote
+{
+    display: block;
+}
+span.hgSub1 > span.etym.x_nblk
+{
+    display: inline;
+}
+
+/*
+span.hg span.hgSub1 span.etym
+{
+  display: inline;
+  margin-right: 0.3em;
+}
+*/
+
+span.hg > span.hgSub2
+{
+    display: block;
+    font-size: 100%;
+    /* margin-left: 2em; */
+}
+
+span.hg > span.hgSub2 span.fg,
+span.hg > span.hgSub2 span.infg,
+span.hg > span.hgSub2 span.vg
+{
+    display: block;
+    font-size: 100%;
+    margin-top: 0.3em;
+}
+
+
+/*=====================================*/
+/* inf                                 */
+/*=====================================*/
+
+span.InfGrp,
+span.iGrp
+{
+    font-weight: normal;
+}
+/*
+span.infg,
+span.gg
+{
+  vertical-align: 1%;
+}
+*/
+span.inf
+{
+    font-weight: 600;
+/*
+  font-style: italic;
+*/
+}
+span.infg span.sy + span.inf
+{
+    margin-left: 0.3em;
+}
+
+span.hg span.hw + span.infg,
+span.hg span.hw + span.gp.ty_hom + span.infg
+{
+    font-size: 170%;
+    font-weight: normal;
+}
+span.hvg span.infg
+{
+    font-size: 58.8%;
+}
+span.hg span.hw + span.infg span.inf,
+span.hg span.hw + span.gp.ty_hom + span.infg span.inf
+{
+    font-weight: normal;
+}
+html.apple_client-panel span.hg span.hw + span.infg,
+html.apple_client-panel span.hg span.hw + span.gp.ty_hom + span.infg
+{
+    font-size: 130%;
+}
+html.apple_client-panel span.hvg span.infg
+{
+    font-size: 76.9%;
+}
+
+/*=====================================*/
+/* f                                   */
+/*=====================================*/
+
+span.formGrp,
+span.fGrp
+{
+    font-weight: normal;
+}
+span.f,
+span.form
+{
+    font-weight: 600;
+}
+
+span.x_xdh > span.sn + span.fg + span.posg
+{
+    margin-left: 0.3em;
+}
+
+
+/*=====================================*/
+/* POS                                 */
+/*=====================================*/
+
+/*
+span.x_xh0 span.posg span.pos,
+span.x_xd0 span.x_xdh span.posg span.pos
+{
+  font-size: 120%;
+}
+*/
+/*
+span.hg span.pos,
+span.hwg span.pos
+*/
+span.hg span.posg,
+span.hwg span.posg
+{
+    margin-right: 0.3em;
+}
+span.gp.tg_pos
+{
+    margin-right: 0.3em;
+}
+
+span.pos.x_rr,
+span.ps.x_rr,
+span.hwg > span.hgSub1 span.ps.x_rr,
+span.lbl.x_rr,
+span.ph.x_rr,
+span.sn.x_rr,
+span.gr.x_rr
+{
+    border: solid 1px var(--secondary-label);
+    /* margin-left: 0.12em; */
+    margin-right: 0.18em;
+    margin-top: 0.18em;
+    margin-bottom: 0.18em;
+    padding: 1px 1px 1px 1px;
+    font-size: 70%;
+    -webkit-border-radius: 2px;
+    vertical-align: 5%;
+}
+span.lbl.x_rr
+{
+    margin-right: 0.4em;
+    vertical-align: 10%;
+}
+span.note span.lbl.x_rr
+{
+    vertical-align: 5%;
+}
+span.subEntry span.pos.x_rr
+{
+    font-size: 70%;
+}
+span.ph.x_rr
+{
+    padding: 2px 3px 0px 3px;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+span.ps.x_rr,
+span.gr.x_rr
+{
+    margin-right: 0.3em;
+}
+
+span.lbl.x_rrbd
+{
+    border: solid var(--secondary-label);
+    border-width: 2px;
+    padding: 2px 4px 1px 4px;
+    -webkit-border-radius: 3px;
+    color: var(--secondary-label);
+    font-weight: 600;
+    font-size: 70%;
+    margin-right: 0.5em;
+    vertical-align: 20%;
+}
+html.apple_client-panel span.lbl.x_rrbd
+{
+    vertical-align: 15%;
+}
+
+span.msDict > span.posg:first-child,
+span.se2 > span.posg:first-child,
+span.x_xdh > span.sn + span.posg
+{
+    margin-right: 0.2em;
+}
+
+span.x_xd0 > span.ps.x_xdh.x_rr
+{
+    display: inline;
+}
+
+span.x_xd0 > span.x_xdh.ps.x_rr
+{
+    font-size: 84%;
+}
+
+/*=====================================*/
+/* pr                                  */
+/*=====================================*/
+
+span.pr,
+span.prx
+{
+    font-weight: normal;
+    color: var(--secondary-label);
+/*
+  font-family: 'Times New Roman';
+*/
+}
+
+span.x_xh0 span.gp.tg_pr,
+span.x_xh0 span.gp.tg_prx,
+span.x_xd0 span.x_xdh span.gp.tg_pr,
+span.x_xd0 span.x_xdh span.gp.tg_prx
+{
+    color: -apple-system-tertiary-label;
+}
+
+span.hg span.pr,
+span.hg span.prx,
+span.hwg span.pr,
+span.hwg span.prx
+{
+    display: inline-block;
+    /*
+  font-size: 130%;
+   */
+    font-size: 120%;
+    line-height: 130%;
+    /* vertical-align: 12%; */
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+}
+span.prx + span.prx
+{
+    margin-left: 0.0em;
+}
+span.hg span.hw span.pr,
+span.hg span.v span.pr
+{
+    font-size: 80%;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+span.hwg span.hvg span.pr,
+span.hwg span.hvg span.prx,
+span.hg span.vg span.pr,
+span.hg span.vg span.prx
+{
+    font-size: 70%;
+}
+html.apple_client-panel span.hwg span.hvg span.pr,
+html.apple_client-panel span.hg span.vg span.pr
+{
+    font-size: 100%;
+}
+
+
+/*
+span.hg > span.pr + span
+{
+  margin-left: 0.6em;
+}
+*/
+
+span.ph
+{
+    /*
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+   */
+}
+
+span.cnt
+{
+    font-weight: 200;
+    color: var(--secondary-label);
+}
+span.cnt.x_rr
+{
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    color: var(--text);
+    border: solid 1px var(--secondary-label);
+    -webkit-border-radius: 2px;
+    font-size: 70%;
+    /* vertical-align: 10%; */
+}
+
+
+/*=====================================*/
+/* sn                                  */
+/*=====================================*/
+
+span.sn
+{
+    font-weight: 600;
+    color: var(--secondary-label);
+}
+span.sn.x_rrbg
+{
+    Background: var(--secondary-label);
+    border: solid var(--secondary-label);
+    border-width: 0px;
+    padding: 3px 2px 1px 2px;
+    -webkit-border-radius: 2px;
+    color: -apple-system-text-background;
+    font-weight: 600;
+    font-size: 70%;
+    vertical-align: 10%;
+    margin-right: 0.5em;
+}
+
+
+/*=====================================*/
+/* ex                                  */
+/*=====================================*/
+
+span.eg span.ex
+{
+    /* font-weight: normal; */
+    font-weight: 200;
+    font-style: italic;
+}
+span.ex span.bold
+{
+    font-weight: 600;
+    font-style: italic;
+}
+span.eg span.ex > span.italic
+{
+    font-style: normal;
+}
+span.eg span.ref
+{
+    font-weight: 200;
+}
+
+/* TH */
+span.eg span.general-text.t_eg_pr
+{
+    font-weight: 200;
+    color: var(--secondary-label);
+}
+/* TR */
+span.eg span.general-text.t_eg_pri
+{
+    font-style: italic;
+    font-weight: 200;
+    color: var(--secondary-label);
+}
+span.gp.t_arrow,
+span.general-text.t_arrow
+{
+    font-size: 90%;
+    vertical-align: -2%;
+    color: var(--secondary-label);
+}
+
+
+/* bilingual */
+span.exg span.ex
+{
+    font-style: normal;
+    font-weight: 500;
+    color: var(--secondary-label);
+}
+span.exg span.ex span.bold
+{
+    font-weight: normal;
+}
+span.reg,
+span.hwg span.reg,
+span.semb span.reg,
+span.semb span.ge,
+span.semb span.sj,
+span.exg span.ex span.reg,
+span.exg span.ex span.ge,
+span.exg span.ex span.sj
+{
+    font-weight: normal;
+    color: var(--secondary-label);
+}
+span.hwg span.reg
+{
+    font-size: 170%;
+    color: -apple-system-tertiary-label;
+}
+html.apple_client-panel span.hwg span.reg
+{
+    font-size: 120%;
+}
+span.hwg span.hvg span.reg,
+span.hwg span.pr span.reg,
+span.hwg span.prx span.reg
+{
+    font-size: 100%;
+    color: -apple-system-tertiary-label;
+}
+
+span.lbl
+{
+    color: var(--secondary-label);
+}
+span.pronBlock span.lbl
+{
+    font-weight: 500;
+    margin-right: 0.3em;
+}
+
+span.lbl.x_sqb
+{
+    background: var(--secondary-label);
+    border: solid var(--secondary-label);
+    border-width: 0px;
+    padding: 2px 4px 2px 4px;
+    font-size: 80%;
+    color: -apple-system-text-background;
+    font-weight: 600;
+    margin-right: 1em;
+    vertical-align: 5%;
+}
+
+
+/*=====================================*/
+/* note                                */
+/*=====================================*/
+
+span.note,
+span.cntxt
+{
+    display: block;
+    /*
+  background-color: window;
+  padding: 0.33em;
+  margin-top: 0.3em;
+   */
+    border: solid 1px -apple-system-tertiary-label;
+    padding: 0.13em 0.49em 0.13em 0.49em;
+    -webkit-border-radius: 3px;
+    margin-top: 0.1em;
+}
+span.note span.lbl,
+span.cntxt span.lbl
+{
+    color: var(--secondary-label);
+}
+span.note.x_nb
+{
+    display: inline;
+    background-color: transparent;
+    padding: 0em;
+    margin-top: 0em;
+    margin-right: 0em;
+}
+/*
+span.paragraph,
+span.para
+{
+  display: block;
+  text-indent: 1em;
+  margin-top: 0.25em;
+}
+*/
+
+/*=====================================*/
+/* subEntry                            */
+/*=====================================*/
+
+span.l,
+span.subEntry span.l ~ span.vg span.v
+{
+    font-weight: 600;
+}
+span.drv
+{
+    font-weight: 600;
+}
+span.drvg span.drv
+{
+    margin-right: 0.5em;
+}
+
+span.subEntry span.pos
+{
+    font-size: 100%;
+}
+
+span.subEntry > span.l + span.pr,
+span.subEntry > span.pr + span.posg
+{
+    margin-left: 0.6em;
+}
+
+/*=====================================*/
+/* etym                                */
+/*=====================================*/
+
+/*
+span.etym	{font-weight:normal;}
+*/
+span.etym > span.lbl
+{
+    color: var(--secondary-label);
+}
+span.etym span.dgg
+{
+    display: block;
+    margin-top: 0.2em;
+    margin-right: 1em;
+}
+
+
+/*=====================================*/
+/* Other                               */
+/*=====================================*/
+
+span.lg,
+span.gg
+{
+    font-style: italic;
+    color: var(--secondary-label);
+    font-size: 94%;
+/*
+  margin-right: 0.3em;
+*/
+}
+/*
+span.gp,
+span.lg,
+span.lbl
+{
+  font-style: normal;
+}
+*/
+
+span.Name	 {font-style: italic;}
+span.altName	 { font-weight: 600; }
+
+span.cite[highlight="true"]
+{
+    font-style: italic;
+}
+span.cite[highlight="false"]
+{
+    font-weight: normal;
+}
+
+span.co
+{
+    font-style: italic;
+}
+span.co.x_ni
+{
+    font-style: normal;
+}
+span.com
+{
+    font-weight: normal;
+}
+span.con
+{
+    font-style: normal;
+    font-weight: 600;
+    color: var(--secondary-label);
+}
+
+
+span.date			{font-weight: normal;}
+span.date + span.italic	{font-style: italic;}
+span.lang			{font-weight: normal;}
+
+span.ex > span.lbl	{ font-weight: normal; }
+
+span.ff
+{
+    font-style: italic;
+    font-weight: 600;
+}
+span.rel
+{
+    font-weight: 600;
+}
+
+span.sp
+{
+    font-weight: 600;
+}
+span.sp span.gp
+{
+    font-weight: normal;
+}
+
+span.trans
+{
+    font-weight: 500;
+}
+span.trg span.trans
+{
+    font-weight: normal;
+}
+span.trg.x_xd2 > span.trans,
+span.trgg.x_xd2 > span.trg > span.trans
+{
+    font-weight: 500;
+}
+span.trg.x_xd2 > span.trans span.tgr,
+span.trgg.x_xd2 > span.trg > span.trans span.tgr
+{
+    font-weight: normal;
+}
+span.x_xdh.sn:first-child + span.exg.x_xd2 > span.trg.x_xd3 > span.trans
+{
+    font-weight: 500;
+}
+span.x_xdh.sn:first-child + span.exg.x_xd2 > span.trg.x_xd3 > span.trans span.tgr
+{
+    font-weight: normal;
+}
+
+span.semb.x_xd2 > span.trg.x_xd3 > span.trans
+{
+    font-weight: 500;
+}
+
+span.efg span.ef
+{
+    font-weight: normal;
+}
+
+span.finf	 {font-style: italic;}
+span.fl		 {font-weight: 600;}
+span.lp[highlight="true"] {font-weight: 600;}
+span.lp[highlight="false"] { font-style: normal;}
+
+span.hwtrans	 { font-weight: normal;}
+
+span.oup_label
+{
+    font-style: italic;
+    color: var(--secondary-label);
+}
+span.oup_label.x_ni
+{
+    font-style: normal;
+}
+
+/*
+span.df > span.lg > span.oup_label,
+span.gp + span.lg > span.oup_label
+{
+  margin-left: 0.2em;
+}
+*/
+
+/*
+span.reg,
+span.ge,
+span.sj
+{
+  font-size: 80%;
+}
+*/
+
+span.xr
+{
+    font-weight: 500;
+}
+span.xr span.gp
+{
+    font-variant: normal;
+}
+
+
+span.hg span.hw span.sy_underline,
+span.hg span.vg span.v span.sy_underline,
+span.sy_underline,
+span.pr span.ph span.str
+{
+    text-decoration: underline;
+}
+
+
+
+/*
+span.lg + span.xrg
+{
+  margin-left: 0.4em;
+}
+span.xrg + span.xrg
+{
+  margin-left: 0.3em;
+}
+*/
+
+span.xu	{font-weight: 600;}
+
+
+/*
+span.def
+{
+  font-weight: normal;
+}
+*/
+
+/*
+span.MS > span.lbl {
+  font-weight: 500;
+  font-size: 80%;
+}
+*/
+
+/*
+span.gramGrp,
+span.gGrp
+{
+  font-weight: normal;
+}
+span.gg,
+span.gp.tg_gg
+{
+  font-weight: normal;
+}
+*/
+
+/*
+span.techGrp>span.lbl, span.techMS>span.lbl { font-weight: 500; font-size: 80%;}
+
+span.txn[highlight="true"] {font-style:italic;}
+span.txn[highlight="false"] { font-weight:normal;}
+
+span.txnBin	 {font-style:italic;}
+span.txnFam	 {font-weight:normal;}
+span.txnGenus	 { font-weight:normal;}
+
+
+
+span.render	{font-style:italic;}
+span.render[as="sans-serif"]	{ font-family:'HelveticaNeue';}
+span.render[as="bold"] 		{font-weight: 600;}
+span.render[as="italic"] 		{font-style:italic;} 
+*/
+
+
+/*=====================================*/
+/* General                             */
+/*=====================================*/
+
+span.bold
+{
+    font-weight: 600;
+}
+span.italic
+{
+    font-style: italic;
+}
+span.underline
+{
+    text-decoration: underline;
+/*
+  font-style: italic;
+  font-weight: normal;
+*/
+    /* color: #444; */
+}
+span.r
+{
+    font-weight: normal;
+    font-style: normal;
+}
+span.sup
+{
+    vertical-align: super;
+    font-size: 70%;
+}
+span.sub,
+span.subEnt
+{
+    vertical-align: sub;
+    font-size: 70%;
+}
+span.sc
+{
+    font-variant: small-caps;
+}
+
+span.bi			 {font-weight: 500; font-style: italic;}
+span.in			 { vertical-align: sub; font-size: 70%}
+span.ini		 { vertical-align: sub; font-size: 70%; font-style:italic;}
+span.su			 { vertical-align: super; font-size: 70%}
+span.sub		 { vertical-align: sub; font-size: 70%}
+span.sui		 { vertical-align: super; font-size: 70%; font-style:italic;}
+span.sup		 { vertical-align: super; font-size: 70%}
+span.subEnt		 { vertical-align: sub; font-size: 70%}
+span.nu			 { vertical-align: super; font-size: 70%}
+span.dn			 { vertical-align: sub; font-size: 70%}
+
+
+span.usageLbl
+{
+    font-weight: normal;
+    font-size: 90%;
+    color: var(--secondary-label);
+}
+span.hw span.usageLbl
+{
+    font-size: 80%;
+}
+
+
+span.general-text.t_label,
+span.general-text.t_label_block
+{
+    font-variant: small-caps;
+    margin-right: 0.3em;
+    color: var(--secondary-label);
+}
+span.general-text.t_label_block
+{
+    display: block;
+    /* margin-top: 0.4em; */
+}
+span.gp.t_label.tg_synList,
+span.gp.t_label.tg_antList,
+span.gp.t_label.tg_see,
+span.gp.t_label.tg_REMISIO,
+span.gp.t_label.tg_etym,
+span.etym span.gp.t_label,
+span.dgg span.gp.t_label
+{
+    margin-right: 0.3em;
+    color: var(--secondary-label);
+}
+
+span.hw span.general-text.en_er,
+span.ehw span.general-text.en_er,
+span.vhw span.general-text.en_er,
+span.sg span.general-text.en_er
+{
+    font-size: 80%;
+}
+
+
+
+span.frmg span.frm
+{
+    font-weight: 600;
+/*
+  font-size: 120%;
+*/
+}
+span.frmg span.frm.x_nb
+{
+    font-weight: normal;
+}
+
+/* span.idmb span.idmsec span.idm */
+span.idmsec span.idm
+{
+    font-weight: 600;
+}
+
+span.pvb span.pvsec span.pvg span.pv,
+span.pvb span.pvsec span.pvg span.pvv
+{
+    font-weight: 600;
+    /* margin-top: 0.5em; */
+}
+
+span.pvsec span.gramb span.semb span.pgr,
+span.pvsec span.gramb span.pgr
+{
+    font-weight: 600;
+    color: var(--secondary-label);
+}
+
+span.cb span.csec span.cwg span.cw,
+span.cb span.csec span.cwg span.cvg span.cv,
+span.csec span.cwg span.cw
+{
+    font-weight: 600;
+}
+
+span.ind,
+span.gr
+{
+    color: var(--secondary-label);
+}
+
+span.lev,
+span.fld
+{
+    font-size: 90%;
+    color: var(--secondary-label);
+}
+
+/*
+span.exg span.ex:before
+{
+  content: "▸ ";
+}
+*/
+
+
+span.trans.ty_pinyin,
+span.trg.x_xd2 > span.trans.ty_pinyin,
+span.trg.x_xd2 > span.trans span.trans.ty_pinyin,
+span.trgg.x_xd2 > span.trg > span.trans.ty_pinyin,
+span.trgg.x_xd2 > span.trg > span.trans span.trans.ty_pinyin
+{
+    /* So that Pinyin match with the one shown on the index column of the dictionary.app */
+    /*font-family: 'STKaitiSC-Regular';*/
+    font-weight: normal;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    color: var(--secondary-label);
+}
+
+
+span.box
+{
+    display: block;
+    /*
+  background-color: window;
+  padding: 0.33em 0.49em 0.33em 0.49em;
+   */
+    border: solid 1px -apple-system-tertiary-label;
+    padding: 0.13em 0.49em 0.13em 0.49em;
+    -webkit-border-radius: 3px;
+    margin-top: 0.1em;
+}
+html.apple_client-panel span.box
+{
+    margin-left: 0em;
+    margin-right: 0em;
+}
+/*
+html.apple_client-panel span.box
+{
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+*/
+
+
+/*=====================================*/
+/* Thesaurus                           */
+/*=====================================*/
+
+span.synGroup > span.syn.t_core
+{
+    font-variant: small-caps;
+    font-size: 120%;
+    vertical-align: -1%;
+}
+span.synGroup > span.syn.t_core > span.gp
+{
+    font-variant: normal;
+    font-size: 90%; 
+}
+
+span.antList > span.gp.ty_label.tg_antList
+{
+    font-variant: small-caps;
+    color: var(--secondary-label);
+    font-size: 80%;
+}	/* ANTONYMS */
+
+
+/*=====================================*/
+/* Features                            */
+/*=====================================*/
+
+span.feature
+{
+    display: block;
+    margin-top: 2.5em;
+    margin-right: 1em;
+}
+html.apple_client-panel span.feature
+{
+    margin-top: 1em;
+}
+
+span.feature-title
+{
+    display: block;
+
+    color: var(--secondary-label);
+    font-weight: 500;
+    font-size: 90%;
+    line-height : 23px;
+    padding-top : 1px;
+    padding-left : 9px;
+    padding-right : 9px;
+    margin-top : 2em;
+    
+    border-style : solid;
+    border-width : 1px 1px 1px 1px;
+    border-color : -apple-system-tertiary-label;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+}
+
+html.apple_client-panel span.feature-title
+{
+    margin-top : 1em;
+}
+
+span.feature-body
+{
+    display: block;
+
+    color: -apple-system-label;
+
+    padding-left : 10px;
+    padding-right : 10px;
+    padding-top : 5px;
+    padding-bottom : 9px;
+
+    border-style : solid;
+    border-width : 0px 1px 1px 1px;
+    border-color : -apple-system-tertiary-label;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+}
+
+span.feature-body table
+{
+    table-layout: fixed;
+    /* table-layout: auto; */
+    width: 100%;
+    margin: 0 0 0 0;
+    border: none;
+}
+
+span.feature-caption
+{
+    display: block;
+
+    color: var(--secondary-label);
+    font-weight: normal;
+    font-size: 90%;
+
+    padding-left : 3px;
+    padding-right : 3px;
+    padding-top : 3px;
+    padding-bottom : 9px;
+}
+
+
+
+
+span.feature span.list
+{
+    display: block;
+}
+
+span.feature span.list + span.list
+{
+    margin-top: 0.25em;
+}
+
+span.feature.t_wordLinks span.list span.item.t_related
+{
+    font-weight: 600;
+    font-variant: small-caps;
+}
+span.feature.t_wordLinks span.list span.item.t_related + span.item.t_description
+{
+    margin-left: 0.5em;
+}
+
+span.para,
+span.list span.item,
+span.np
+{
+    display: block;
+    margin-top: 0.25em;
+}
+
+span.feature.t_rightWord span.heading,
+span.feature.t_usage span.heading,
+span.feature.t_wordNote span.heading
+{
+    font-weight: 500;
+}
+span.feature.t_wordNote span.heading
+{
+    display: block;
+}
+
+span.ll
+{
+    font-weight: 500;
+}
+span.ll span.gp
+{
+    font-weight: normal;
+}
+
+span.feature.t_toolkit > span.feature-body > table tbody tr td.lemma
+{
+    font-weight: 600;
+    font-size: 110%;
+}
+
+span.feature.t_quotes span.para span.eg span.ref
+{
+    display: block;
+}
+
+span.feature.t_encyclopaedic
+{
+    display: block;
+    /*
+  background-color: window;
+  padding: 0.33em 0.49em 0.33em 0.49em;
+   */
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: solid 1px -apple-system-tertiary-label;
+    padding: 0.13em 0.49em 0.13em 0.49em;
+    -webkit-border-radius: 3px;
+    /* margin-top: 0.1em; */
+}
+
+
+/*=====================================*/
+/* Panel                               */
+/*=====================================*/
+
+/*
+html.apple_client-panel body
+{
+  margin-top: 0em;
+}
+
+html.apple_client-panel *.entry
+{
+  line-height: 120%;
+}
+
+html.apple_client-panel span.hw, span.ehw, span.vhw 	{ font-size: 120%;}
+html.apple_client-panel span.hg span.fg	{ font-size: 100%; }
+
+html.apple_client-panel span.hg span.pr
+{
+  font-size: 100%;
+}
+html.apple_client-panel span.pos
+{
+  font-size: 100%;
+}
+
+*/
+
+
+/* POS after the headword */
+/*
+html.apple_client-panel span.sg,
+html.apple_client-panel span.hg,
+html.apple_client-panel span.sg span.se1:first-child,
+html.apple_client-panel span.sg span.se1:first-child span.pr
+{
+  display: inline;
+  margin-left: 0em;
+  padding-left: 0em;
+}
+html.apple_client-panel span.sg span.se1:first-child span.posg
+{
+  display: inline;
+  margin-left: 1em;
+}
+html.apple_client-panel span.sg span.se1 span.posg
+{
+  margin-left: 0em;
+}
+*/
+
+/*=====================================*/
+/*                                     */
+/*=====================================*/
+
+
+span.eg.x_blk,
+span.xrg.x_blk,
+span.lbl.x_blk
+{
+    display: block;
+}
+span.eg span.ex.x_ni
+{
+    font-style: normal;
+    font-weight: 200;
+}
+span.eg span.ex.x_ni span.bold
+{
+    font-style: normal;
+    font-weight: 600;
+}
+span.lg.x_ni,
+span.gg.x_ni,
+span.ff.x_ni
+{
+    font-style: normal;
+}
+
+
+img.gi
+{
+    width: 1.0em;
+    height: 1.0em;
+}
+
+img.image.th
+{
+    display: block;
+    width: 96%;
+    margin-top: 1em;
+}
+
+
+
+/*=====================================*/
+/* Panel                               */
+/* Move POS                            */
+/* x_xd0:not(.hasSn)                   */
+/* :first-child or x_xh0 + x_xd0       */
+/*=====================================*/
+html.apple_client-panel *.entry > span.x_xh0:first-child,
+html.apple_client-panel span.x_xd0:not(.hasSn):first-child,
+html.apple_client-panel span.x_xd0:not(.hasSn):first-child > span.x_xdh,
+html.apple_client-panel span.x_xh0 + span.x_xd0:not(.hasSn),
+html.apple_client-panel span.x_xh0 + span.x_xd0:not(.hasSn) > span.x_xdh
+{
+	  display: inline;
+}
+html.apple_client-panel span.x_xd0:not(.hasSn):first-child > span.x_xd1,
+html.apple_client-panel span.x_xd0:not(.hasSn):first-child > span.x_xd0,
+html.apple_client-panel span.x_xh0 + span.x_xd0:not(.hasSn) > span.x_xd1,
+html.apple_client-panel span.x_xh0 + span.x_xd0:not(.hasSn) > span.x_xd0
+{
+	  margin-left: 1em;
+}
+html.apple_client-panel span.x_xd0:not(.hasSn):first-child > span.x_xd1.hasSn,
+html.apple_client-panel span.x_xd0:not(.hasSn):first-child > span.x_xd0.hasSn,
+html.apple_client-panel span.x_xh0 + span.x_xd0:not(.hasSn) > span.x_xd1.hasSn,
+html.apple_client-panel span.x_xh0 + span.x_xd0:not(.hasSn) > span.x_xd0.hasSn
+{
+	  margin-left: 2em;
+}
+html.apple_client-panel span.hg > span.hgSub1,
+html.apple_client-panel span.hwg > span.hgSub1
+{
+	  display: inline;
+	  margin-left: 1em;
+}
+
+/* EN_GB */
+
+/* Hide US diacritical style pronunciation */
+span.pr span.ph[d\:pr="US"],
+span.prx span.ph[d\:pr="US"]
+{
+	  /* display: none; */
+	  /* for ODE */
+}
+
+/* */
