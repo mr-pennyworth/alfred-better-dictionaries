@@ -7,13 +7,22 @@ Usage:
 
 from setuptools import setup
 
+def get_module_name(pkg_name):
+  # some pip package names are different from module names
+  pkg_to_module_map = {
+    'beautifulsoup4': 'bs4'
+  }
+  return pkg_to_module_map.get(pkg_name, pkg_name)
+
+
 def get_requirements():
   with open('requirements.txt') as f:
     return [
-      l.split('==')[0]
+      get_module_name(l.split('==')[0])
       for l in f.readlines()
       if not l.startswith('py2app')
     ]
+
 
 APP = ['BetterDict.py']
 DATA_FILES = [
