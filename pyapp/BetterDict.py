@@ -208,15 +208,17 @@ def dict_info(dict_path):
 
 
 def all_dict_paths():
-  system_dict_paths = glob.glob(
-    '/System/Library/AssetsV2'
-    '/com_apple_MobileAsset_DictionaryServices_dictionaryOSX'
-    '/*.asset/AssetData/*.dictionary'
-  ) + glob.glob('/Library/Dictionaries/*.dictionary')
-  user_dict_paths = glob.glob(f'{HOME}/Library/Dictionaries/*.dictionary')
+  dict_paths = []
+  dict_globs = [
+    '/System/Library/AssetsV2/**/*.dictionary',
+    '/Library/Dictionaries/**/*.dictionary',
+    f'{HOME}/Library/Dictionaries/**/*.dictionary'
+  ]
+  for dict_glob in dict_globs:
+    dict_paths.extend(glob.glob(dict_glob, recursive=True))
   return [
     dict_path for dict_path
-    in system_dict_paths + user_dict_paths
+    in dict_paths
     if os.path.exists(f'{dict_path}/Contents/Resources/Body.data')
   ]
 
