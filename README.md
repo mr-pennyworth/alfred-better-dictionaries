@@ -1,5 +1,10 @@
 # Better Dictionaries
-Better search and live previews for built-in macOS dictionaries.  [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mr-pennyworth/alfred-better-dictionaries?color=green&label=download)](https://github.com/mr-pennyworth/alfred-better-dictionaries/releases/latest/download/Better.Dictionaries.alfredworkflow)
+
+<a href="https://github.com/mr-pennyworth/alfred-better-dictionaries/releases/latest/">
+  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/mr-pennyworth/alfred-better-dictionaries/total">
+</a><br/><br/>
+
+Better search and live previews for built-in macOS dictionaries.
 
 ### Features
  - IPA (phonetic) pronunciations:
