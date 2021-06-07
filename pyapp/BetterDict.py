@@ -174,12 +174,22 @@ def make_alfred_item(word, filename, definition, html_dir):
   if snippet_div is not None:
     snippet = snippet_div.get_text()
 
+  # forms of a word typically include:
+  # plural forms of a noun: (mouse, mice)
+  # intensifiers for odjectives: (good, better, best)
+  # past-tense variations of verbs: (fly, flew, flown)
+  forms = ''
+  forms_div = soup.find(attrs={'class': 'infg'})
+  if forms_div is not None:
+    forms = forms_div.get_text()
+
   html_path = f'{html_dir}/{filename}'
   item = {
     'arg': html_path,
     'title': word,
     'id': filename.split('.')[0],
-    'subtitle': snippet,
+    'forms': forms,
+    'subtitle': forms + snippet,
     'fulltext': fulltext,
     'quicklookurl': html_path,
   }
@@ -334,9 +344,22 @@ def search_client(db_path):
 def create_index(dict_id, db_path):
   db = search_client(db_path)
   index = db.create_index(dict_id)
-  index.update_searchable_attributes(['title', 'subtitle', 'fulltext'])
+  index.update_searchable_attributes([
+    'title',
+    'forms',
+    'subtitle',
+    'fulltext',
+  ])
+  index.update_ranking_rules([
+    'exactness',
+    'attribute',
+    'wordsPosition',
+    'typo',
+    'words',
+    'proximity',
+  ])
   index.update_displayed_attributes([
-    # everything except id and fulltext
+    # everything except id, forms, and fulltext
     'arg',
     'mods',
     'title',
