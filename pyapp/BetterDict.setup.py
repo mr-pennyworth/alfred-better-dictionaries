@@ -35,6 +35,7 @@ OPTIONS = {
   # No idea why these are being included by default!
   'excludes': ['PIL', 'numpy', 'scipy', 'matplotlib'],
   'packages': get_requirements(),
+  'frameworks' : ['/usr/lib/libxml2.dylib'],
   'plist': {
     'LSUIElement': True,
   },

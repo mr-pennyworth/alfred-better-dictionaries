@@ -1,4 +1,5 @@
 beautifulsoup4==4.8.2
+lxml==4.6.3
 meilisearch==0.13.0
 multiprocess==0.70.11.1
 py2app==0.22

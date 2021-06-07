@@ -167,7 +167,7 @@ def build_index(word_defs_map_items, dict_id, db_path, html_dir):
 
 
 def make_alfred_item(word, filename, definition, html_dir):
-  soup = BeautifulSoup(definition, 'html.parser')
+  soup = BeautifulSoup(definition, 'lxml')
   fulltext = soup.get_text()
   snippet = fulltext
   snippet_div = soup.find(attrs={'d:def': '1'})
