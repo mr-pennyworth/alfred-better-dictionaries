@@ -2,6 +2,7 @@
 *~
 *.log
 *.alfredworkflow
+*.orig
 __pycache__
 dist
 build

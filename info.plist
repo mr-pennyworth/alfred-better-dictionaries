@@ -135,6 +135,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B1C33335-D970-4488-8953-913D6C7E3D6F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>402C89C1-C3F3-4786-9683-19ACD884E06E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BFB7EC55-C8DC-41FE-A229-620F988641E7</key>
 		<array>
 			<dict>
@@ -613,6 +626,62 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>function confirm() {
+./BetterDict.app/Contents/Resources/cocoadialog.app/Contents/MacOS/cocoaDialog \
+  yesno-msgbox \
+  --no-cancel \
+  --title 'Factory Reset BetterDict' \
+  --label 'This will delete the HTML previews and search index. You can re-import the dictionaries later.' \
+  --alert 'Do you really want to delete all imported dictionaries?'
+}
+
+if [ "$(confirm)" = "1" ]; then
+  killall alfred-dict-server
+  ./BetterDict.app/Contents/MacOS/BetterDict factoryReset "$alfred_workflow_data"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>402C89C1-C3F3-4786-9683-19ACD884E06E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>.dict-factory-reset</string>
+				<key>subtext</key>
+				<string>keywoard: '.dict-factory-reset'</string>
+				<key>text</key>
+				<string>Factory Reset BetterDictionary: Clear All Imported</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B1C33335-D970-4488-8953-913D6C7E3D6F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>openwith</key>
 				<string></string>
 				<key>sourcefile</key>
@@ -874,6 +943,8 @@ The extra pane needs these permissions for:
   - getting position of alfred on screen for showing up right next to it</string>
 				<key>textcolor</key>
 				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.largetype</string>
@@ -975,6 +1046,13 @@ Subsequent searches should be snappy
 			<key>ypos</key>
 			<integer>190</integer>
 		</dict>
+		<key>402C89C1-C3F3-4786-9683-19ACD884E06E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>150</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
 		<key>4304F5B0-5EE4-4190-8C7A-3D3BF945DBD9</key>
 		<dict>
 			<key>note</key>
@@ -1040,6 +1118,13 @@ Subsequent searches should be snappy
 			<integer>650</integer>
 			<key>ypos</key>
 			<integer>190</integer>
+		</dict>
+		<key>B1C33335-D970-4488-8953-913D6C7E3D6F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>280</integer>
 		</dict>
 		<key>BFB7EC55-C8DC-41FE-A229-620F988641E7</key>
 		<dict>
@@ -1112,7 +1197,7 @@ Subsequent searches should be snappy
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.5</string>
+	<string>0.1.6</string>
 	<key>webaddress</key>
 	<string>https://github.com/mr-pennyworth/alfred-better-dictionaries</string>
 </dict>

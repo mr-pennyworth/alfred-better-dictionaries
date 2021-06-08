@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make a copy of the original 'factory-version' workflow
+cp info.plist info.plist.orig
+
 chmod +x ./jq
 chmod +x ./alfred-dict-server
 

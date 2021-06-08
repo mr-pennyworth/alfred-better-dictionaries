@@ -7,6 +7,7 @@ import os
 import plistlib
 import re
 import requests
+import shutil
 import sys
 import time
 
@@ -391,6 +392,12 @@ def list_unimported_dicts(import_base_dir):
   print(json.dumps(alfreditems, indent=2))
 
 
+def factory_reset(base_dir):
+  shutil.rmtree(base_dir)
+  shutil.copy(f'{WORKFLOW_DIR}/info.plist', f'{WORKFLOW_DIR}/info.plist.bkp')
+  shutil.copy(f'{WORKFLOW_DIR}/info.plist.orig', f'{WORKFLOW_DIR}/info.plist')
+
+
 def fullpath(p):
   return os.path.abspath(os.path.expanduser(p))
 
@@ -400,6 +407,9 @@ if __name__ == '__main__':
   if command == 'listUnimported':
     base_dir = fullpath(sys.argv[2])
     list_unimported_dicts(base_dir)
-  if command == 'import':
+  elif command == 'import':
     dict_path, base_dir = map(fullpath, sys.argv[2:4])
     import_dict(dict_path, base_dir)
+  elif command == 'factoryReset':
+    base_dir = fullpath(sys.argv[2])
+    factory_reset(base_dir)
