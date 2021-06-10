@@ -1,9 +1,12 @@
-# Better Dictionaries
-
+<h1 align="center">
+  
 <a href="https://github.com/mr-pennyworth/alfred-better-dictionaries/releases/latest/">
-  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/mr-pennyworth/alfred-better-dictionaries/total">
-</a><br/><br/>
-
+  <img src="icon.png" width="16%"><br/>
+  <img alt="Download"
+       src="https://img.shields.io/github/downloads/mr-pennyworth/alfred-better-dictionaries/total?color=purple&label=Download"><br/>
+</a>
+  Better Dictionaries
+</h1>
 Better search and live previews for built-in macOS dictionaries.
 
 ### Features
