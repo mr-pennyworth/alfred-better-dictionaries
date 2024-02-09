@@ -333,14 +333,14 @@ def start_search_server(db_path):
     ]
     Popen(cmd, stdout=logfile, stderr=logfile)
   # Give the server time to come up and start serving the REST API.
-  sleep(1)
+  time.sleep(1)
 
 
 def search_client(db_path):
   if not is_search_server_up():
     start_search_server(db_path)
   while not is_search_server_up():
-    sleep(0.01)
+    time.sleep(0.01)
   return meilisearch.Client(f'http://{SEARCH_IP}:{SEARCH_PORT}')
 
 
