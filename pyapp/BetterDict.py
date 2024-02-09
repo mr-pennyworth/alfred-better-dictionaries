@@ -295,6 +295,9 @@ def import_dict(dict_path, import_base_dir):
   dest_html_dir = f'{dest_dir}/html'
   db_path = f'{import_base_dir}/db'
 
+  if not is_search_server_up():
+    start_search_server(db_path)
+
   os.makedirs(dest_html_dir, exist_ok=True)
 
   word_defs_map = get_word_defs_map(data_path)
@@ -332,8 +335,6 @@ def start_search_server(db_path):
       '--http-payload-size-limit', '1000000000'
     ]
     Popen(cmd, stdout=logfile, stderr=logfile)
-  # Give the server time to come up and start serving the REST API.
-  time.sleep(1)
 
 
 def search_client(db_path):
