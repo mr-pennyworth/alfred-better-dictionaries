@@ -253,9 +253,9 @@ def create_workflow_objects(dict_name, dict_id):
     note=dict_name,
     title=f'search {dict_name}',
     script=(
-      'open -g ./AlfredExtraPane.app\n\n',
-      'query="$1"\n\n',
-      f'./search.sh "$query" "{dict_id}"',
+      'open -g ./AlfredExtraPane.app\n\n'
+      'query="$1"\n\n'
+      f'./search.sh "$query" "{dict_id}"'
     ),
   )
   router = wf.getObjWithLabel('router')
