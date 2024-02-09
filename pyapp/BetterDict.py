@@ -252,7 +252,11 @@ def create_workflow_objects(dict_name, dict_id):
   script_filter = wf.newBashScriptFilter(
     note=dict_name,
     title=f'search {dict_name}',
-    script=f'query="$1"\n\n./search.sh "$query" "{dict_id}"',
+    script=(
+      'open -g ./AlfredExtraPane.app\n\n',
+      'query="$1"\n\n',
+      f'./search.sh "$query" "{dict_id}"',
+    ),
   )
   router = wf.getObjWithLabel('router')
   router_output = wf.addOutputToRouter(router, output=dict_id)
