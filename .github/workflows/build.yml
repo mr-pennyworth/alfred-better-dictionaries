@@ -33,6 +33,9 @@ jobs:
       - name: Extract AlfredExtraPane
         run: unzip AlfredExtraPane.app.zip
 
+      - name: Install libxml2
+        run: brew install libxml2
+
       - name: Build Workflow
         run: python3 mkworkflow.py
 
