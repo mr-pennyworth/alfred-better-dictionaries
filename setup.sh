@@ -10,6 +10,7 @@ chmod +x ./jq
 xattr -d com.apple.quarantine ./AlfredExtraPane.app
 xattr -d com.apple.quarantine ./alfred-dict-server
 xattr -d com.apple.quarantine ./BetterDict
+xattr -d com.apple.quarantine ./cocoaDialog.app
 xattr -d com.apple.quarantine ./jq
 
 open ./AlfredExtraPane.app
