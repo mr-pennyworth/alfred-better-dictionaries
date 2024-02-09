@@ -31,9 +31,7 @@ Better search and live previews for built-in macOS dictionaries.
 
 
 ### Setup
-After importing the workflow,
-first type `.setup-better-dictionaries` into Alfred
-and follow the instructions for granting permissions.
+After importing the workflow, type `.setup-better-dictionaries` into Alfred.
 
 
 ### Importing a Dictionary
