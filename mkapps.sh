@@ -2,6 +2,7 @@
 set -o xtrace
 
 # Pick the correct meilisearch binary for the arch
+git lfs pull
 cp "meilisearch-$(uname -m)" alfred-dict-server
 
 # Build the python scripts into a standalone binary
