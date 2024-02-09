@@ -1,14 +1,14 @@
 :root
 {
     --secondary-label: var(--result-subtext-color, #eee);
-    --text: var(--search-text-color, #eee);
+    --text: var(--result-text-color, #eee);
     --link: var(--result-text-colorSelected, var(--link));
 }
 
 html
 {
     background-color: var(--window-color, #1d1e28);
-    color: var(--search-text-color, #eee);
+    color: var(--result-text-color, #eee);
 }
 
 body
