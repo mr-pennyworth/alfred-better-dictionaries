@@ -11,8 +11,10 @@ from contextlib import contextmanager
 BUILD_DIR = 'wfbuild'
 WF_FILES = [
   'AlfredExtraPane.app',
-  'BetterDict.app',
+  'BetterDict',
   'alfred-dict-server',
+  'cocoaDialog.app',
+  'dict-entry.css',
   'icon.png',
   'info.plist',
   'jq',

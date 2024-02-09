@@ -25,5 +25,4 @@ items=$(curl "$search_endpoint" \
         --data "{ \"q\": \"$query\", \"limit\": 9 }" \
         | ./jq '.hits')
 
-echo "{ \"items\": $items }" \
-  | 'AlfredExtraPane.app/Contents/Resources/scripts/alfred-extra-pane'
+echo "{ \"items\": $items }"

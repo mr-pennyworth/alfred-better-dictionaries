@@ -5,10 +5,16 @@ import time
 from multiprocess import Process, Queue
 from subprocess import Popen, PIPE
 
+import alfred
+
+
+WORKFLOW_DIR = alfred.get_workflow_dir()
+CD_PATH = f'{WORKFLOW_DIR}/cocoaDialog.app/Contents/MacOS/cocoaDialog'
+
+
 class ProgressBar:
   
   def __init__(self, title='Progress', message='', percent=0.01):
-    CD_PATH = 'cocoaDialog.app/Contents/MacOS/cocoaDialog'
     cmd = [
       CD_PATH, 'progressbar',
       '--title', title,
@@ -36,7 +42,6 @@ class ProgressBar:
 class IndefiniteProgressBar:
 
   def __init__(self, title='Progress', message=''):
-    CD_PATH = 'cocoaDialog.app/Contents/MacOS/cocoaDialog'
     cmd = [
       CD_PATH, 'progressbar',
       '--title', title,

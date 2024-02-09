@@ -119,7 +119,7 @@ def create_html_files(word_defs_map_items, html_dir):
     title=title
   )
 
-  with open('dict-entry.css', 'rb') as src:
+  with open(f'{WORKFLOW_DIR}/dict-entry.css', 'rb') as src:
     with open(f'{html_dir}/dict-entry.css', 'wb') as dst:
       dst.write(src.read())
 
@@ -332,6 +332,8 @@ def start_search_server(db_path):
       '--http-payload-size-limit', '1000000000'
     ]
     Popen(cmd, stdout=logfile, stderr=logfile)
+  # Give the server time to come up and start serving the REST API.
+  sleep(1)
 
 
 def search_client(db_path):

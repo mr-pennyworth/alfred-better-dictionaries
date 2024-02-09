@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sys
 
 def infer_workflow_dir():
-  candidate = sys.path[0]
+  candidate = os.getcwd()
   while not os.path.split(candidate)[1].startswith('user.workflow.'):
+    if candidate == '/': return None
     candidate = os.path.split(candidate)[0]
   return candidate
 

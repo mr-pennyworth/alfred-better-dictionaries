@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
-cd pyapp
-pip3 install -r requirements.txt
-python3 BetterDict.setup.py py2app --dist-dir=../ $@
-cd ..
+pip3 install -r pyapp/requirements.txt
+pyinstaller pyapp/BetterDict.py --onefile --noconfirm --distpath ./

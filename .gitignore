@@ -3,9 +3,11 @@
 *.log
 *.alfredworkflow
 *.orig
+*.bkp
 __pycache__
 dist
 build
 wfbuild
 AlfredExtraPane.app
-BetterDict.app
+BetterDict
+BetterDict.spec

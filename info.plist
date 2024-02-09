@@ -60,42 +60,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>3AA09886-D09C-4B9C-AE26-8D8511C92573</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4304F5B0-5EE4-4190-8C7A-3D3BF945DBD9</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>07542750-62D5-4658-B992-090595513ACF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>44388773-BC47-4C64-9414-D2D3F7C05428</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C9C30507-A323-4B96-A850-C514F792C9E6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>761778DB-3FD1-4498-9E85-CDE066A12538</key>
 		<array>
 			<dict>
@@ -110,31 +74,7 @@
 			</dict>
 		</array>
 		<key>96B75A90-A8B0-4B61-85E7-91F01F0835E3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>5C6303A0-83EE-49BD-86AB-FE47C9BA6C14</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>AC1CC3CF-7097-4667-B551-1D53CD53E2E2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>3AA09886-D09C-4B9C-AE26-8D8511C92573</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>B1C33335-D970-4488-8953-913D6C7E3D6F</key>
 		<array>
 			<dict>
@@ -148,47 +88,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>BFB7EC55-C8DC-41FE-A229-620F988641E7</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>3AA09886-D09C-4B9C-AE26-8D8511C92573</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>C6850BD6-BCFE-456F-AF77-59A4F8F5D50A</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>29F7F338-2B96-43C0-A429-19810757504C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>C9C30507-A323-4B96-A850-C514F792C9E6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4304F5B0-5EE4-4190-8C7A-3D3BF945DBD9</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>07542750-62D5-4658-B992-090595513ACF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -212,19 +116,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>07542750-62D5-4658-B992-090595513ACF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>E3CBC6C0-D887-4F1B-BF41-5555FAD9BBC0</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C9C30507-A323-4B96-A850-C514F792C9E6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -257,30 +148,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>92307DED-E117-458E-BCD0-06C64248AB1F</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>BFB7EC55-C8DC-41FE-A229-620F988641E7</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>F61022C1-4494-463F-BFB0-7185C47AAE53</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>E3CBC6C0-D887-4F1B-BF41-5555FAD9BBC0</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>E2EDCE99-08AE-44CB-8094-6DE0B2C97F00</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -370,37 +237,11 @@
 						<key>uid</key>
 						<string>92307DED-E117-458E-BCD0-06C64248AB1F</string>
 					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:dict_id}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>com-apple-dictionary-OAWT</string>
-						<key>outputlabel</key>
-						<string>com-apple-dictionary-OAWT</string>
-						<key>uid</key>
-						<string>F61022C1-4494-463F-BFB0-7185C47AAE53</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:dict_id}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>com-apple-dictionary-NOAD</string>
-						<key>outputlabel</key>
-						<string>com-apple-dictionary-NOAD</string>
-						<key>uid</key>
-						<string>E2EDCE99-08AE-44CB-8094-6DE0B2C97F00</string>
-					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -536,92 +377,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>1</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>thesaurus</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>loading...</string>
-				<key>script</key>
-				<string>query="$1"
-
-./search.sh "$query" "com-apple-dictionary-OAWT"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
+				<key>openwith</key>
 				<string></string>
-				<key>subtext</key>
+				<key>sourcefile</key>
 				<string></string>
-				<key>title</key>
-				<string>search Oxford American Writer’s Thesaurus</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
-			<string>3AA09886-D09C-4B9C-AE26-8D8511C92573</string>
+			<string>07542750-62D5-4658-B992-090595513ACF</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>AC1CC3CF-7097-4667-B551-1D53CD53E2E2</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>BFB7EC55-C8DC-41FE-A229-620F988641E7</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -632,7 +398,7 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>function confirm() {
-./BetterDict.app/Contents/Resources/cocoadialog.app/Contents/MacOS/cocoaDialog \
+./cocoadialog.app/Contents/MacOS/cocoaDialog \
   yesno-msgbox \
   --no-cancel \
   --title 'Factory Reset BetterDict' \
@@ -642,7 +408,7 @@
 
 if [ "$(confirm)" = "1" ]; then
   killall alfred-dict-server
-  ./BetterDict.app/Contents/MacOS/BetterDict factoryReset "$alfred_workflow_data"
+  ./BetterDict factoryReset "$alfred_workflow_data"
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -682,103 +448,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>07542750-62D5-4658-B992-090595513ACF</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>1</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>defn</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>loading...</string>
-				<key>script</key>
-				<string>query="$1"
-
-./search.sh "$query" "com-apple-dictionary-NOAD"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>search New Oxford American Dictionary</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>C9C30507-A323-4B96-A850-C514F792C9E6</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>4</integer>
-				<key>hotmod</key>
-				<integer>1835008</integer>
-				<key>hotstring</key>
-				<string>D</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>44388773-BC47-4C64-9414-D2D3F7C05428</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -786,7 +455,7 @@ fi</string>
 				<key>script</key>
 				<string>query=$1
 
-./BetterDict.app/Contents/MacOS/BetterDict import "$query" "$alfred_workflow_data"</string>
+./BetterDict import "$query" "$alfred_workflow_data"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -829,7 +498,7 @@ fi</string>
 				<key>runningsubtext</key>
 				<string>loading...</string>
 				<key>script</key>
-				<string>./BetterDict.app/Contents/MacOS/BetterDict listUnimported "$alfred_workflow_data"</string>
+				<string>./BetterDict listUnimported "$alfred_workflow_data"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -872,14 +541,6 @@ fi</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>E3CBC6C0-D887-4F1B-BF41-5555FAD9BBC0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
@@ -917,41 +578,6 @@ END</string>
 			<string>96B75A90-A8B0-4B61-85E7-91F01F0835E3</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alignment</key>
-				<integer>0</integer>
-				<key>backgroundcolor</key>
-				<string></string>
-				<key>fadespeed</key>
-				<integer>0</integer>
-				<key>fillmode</key>
-				<integer>0</integer>
-				<key>font</key>
-				<string></string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>largetypetext</key>
-				<string>Allow "Accessibility"
-For "AlfredExtraPane.app"
-
-The extra pane needs these permissions for:
-  - knowing when alfred hides; to hide itself
-  - monitoring up-down-arrow key presses for showing correct previews
-  - getting position of alfred on screen for showing up right next to it</string>
-				<key>textcolor</key>
-				<string></string>
-				<key>wrapat</key>
-				<integer>50</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
-			<key>uid</key>
-			<string>5C6303A0-83EE-49BD-86AB-FE47C9BA6C14</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1003,89 +629,60 @@ Subsequent searches should be snappy
 			<key>note</key>
 			<string>Open definition in browser</string>
 			<key>xpos</key>
-			<integer>1265</integer>
+			<real>1265</real>
 			<key>ypos</key>
-			<integer>370</integer>
+			<real>195</real>
 		</dict>
 		<key>18D17FBB-4E03-4E94-9802-19E31E8C516C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>10</integer>
+			<real>15</real>
 		</dict>
 		<key>1F752B51-8F34-42C7-B6EE-3DBFE003C773</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>500</integer>
+			<real>500</real>
 		</dict>
 		<key>29F7F338-2B96-43C0-A429-19810757504C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<real>185</real>
 			<key>ypos</key>
-			<integer>390</integer>
+			<real>390</real>
 		</dict>
 		<key>31F0971B-EEAC-47C1-8132-C34467C22DD3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<real>150</real>
 			<key>ypos</key>
-			<integer>35</integer>
-		</dict>
-		<key>3AA09886-D09C-4B9C-AE26-8D8511C92573</key>
-		<dict>
-			<key>noexport</key>
-			<integer>1</integer>
-			<key>note</key>
-			<string>Oxford American Writer’s Thesaurus</string>
-			<key>xpos</key>
-			<integer>840</integer>
-			<key>ypos</key>
-			<integer>190</integer>
+			<real>35</real>
 		</dict>
 		<key>402C89C1-C3F3-4786-9683-19ACD884E06E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<real>185</real>
 			<key>ypos</key>
-			<integer>280</integer>
+			<real>280</real>
 		</dict>
 		<key>4304F5B0-5EE4-4190-8C7A-3D3BF945DBD9</key>
 		<dict>
 			<key>note</key>
 			<string>Play pronunciation audio</string>
 			<key>xpos</key>
-			<integer>1265</integer>
+			<real>1265</real>
 			<key>ypos</key>
-			<integer>10</integer>
-		</dict>
-		<key>44388773-BC47-4C64-9414-D2D3F7C05428</key>
-		<dict>
-			<key>noexport</key>
-			<integer>1</integer>
-			<key>note</key>
-			<string>New Oxford American Dictionary</string>
-			<key>xpos</key>
-			<integer>650</integer>
-			<key>ypos</key>
-			<integer>370</integer>
-		</dict>
-		<key>5C6303A0-83EE-49BD-86AB-FE47C9BA6C14</key>
-		<dict>
-			<key>xpos</key>
-			<integer>290</integer>
-			<key>ypos</key>
-			<integer>500</integer>
+			<real>15</real>
 		</dict>
 		<key>6E224CAA-82D7-45F9-9037-58E8D3C2F854</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>330</real>
 			<key>ypos</key>
-			<integer>390</integer>
+			<real>390</real>
 		</dict>
 		<key>761778DB-3FD1-4498-9E85-CDE066A12538</key>
 		<dict>
@@ -1094,9 +691,9 @@ Subsequent searches should be snappy
 			<key>note</key>
 			<string>dummy hotkey</string>
 			<key>xpos</key>
-			<integer>650</integer>
+			<real>650</real>
 			<key>ypos</key>
-			<integer>10</integer>
+			<real>15</real>
 		</dict>
 		<key>96B75A90-A8B0-4B61-85E7-91F01F0835E3</key>
 		<dict>
@@ -1104,54 +701,23 @@ Subsequent searches should be snappy
 			<string>- de-quarantine
 - grant permissions</string>
 			<key>xpos</key>
-			<integer>150</integer>
+			<real>185</real>
 			<key>ypos</key>
-			<integer>500</integer>
-		</dict>
-		<key>AC1CC3CF-7097-4667-B551-1D53CD53E2E2</key>
-		<dict>
-			<key>noexport</key>
-			<integer>1</integer>
-			<key>note</key>
-			<string>Oxford American Writer’s Thesaurus</string>
-			<key>xpos</key>
-			<integer>650</integer>
-			<key>ypos</key>
-			<integer>190</integer>
+			<real>500</real>
 		</dict>
 		<key>B1C33335-D970-4488-8953-913D6C7E3D6F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>280</integer>
-		</dict>
-		<key>BFB7EC55-C8DC-41FE-A229-620F988641E7</key>
-		<dict>
-			<key>noexport</key>
-			<integer>1</integer>
-			<key>xpos</key>
-			<integer>550</integer>
-			<key>ypos</key>
-			<integer>220</integer>
+			<real>280</real>
 		</dict>
 		<key>C6850BD6-BCFE-456F-AF77-59A4F8F5D50A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>390</integer>
-		</dict>
-		<key>C9C30507-A323-4B96-A850-C514F792C9E6</key>
-		<dict>
-			<key>noexport</key>
-			<integer>1</integer>
-			<key>note</key>
-			<string>New Oxford American Dictionary</string>
-			<key>xpos</key>
-			<integer>840</integer>
-			<key>ypos</key>
-			<integer>370</integer>
+			<real>390</real>
 		</dict>
 		<key>CE509E43-D9A7-4B99-AFA6-6FEEB4D26442</key>
 		<dict>
@@ -1160,18 +726,9 @@ Subsequent searches should be snappy
 			<key>note</key>
 			<string>dummy script filter</string>
 			<key>xpos</key>
-			<integer>840</integer>
+			<real>840</real>
 			<key>ypos</key>
-			<integer>10</integer>
-		</dict>
-		<key>E3CBC6C0-D887-4F1B-BF41-5555FAD9BBC0</key>
-		<dict>
-			<key>noexport</key>
-			<integer>1</integer>
-			<key>xpos</key>
-			<integer>550</integer>
-			<key>ypos</key>
-			<integer>400</integer>
+			<real>15</real>
 		</dict>
 		<key>EAFA3DE4-7416-4CD3-94A2-91E6A70F554B</key>
 		<dict>
@@ -1180,24 +737,26 @@ Subsequent searches should be snappy
 			<key>note</key>
 			<string>dummy junction</string>
 			<key>xpos</key>
-			<integer>550</integer>
+			<real>550</real>
 			<key>ypos</key>
-			<integer>40</integer>
+			<real>40</real>
 		</dict>
 		<key>F7170828-96FA-4241-A50B-974496E7A1FC</key>
 		<dict>
 			<key>note</key>
 			<string>router</string>
 			<key>xpos</key>
-			<integer>210</integer>
+			<real>210</real>
 			<key>ypos</key>
-			<integer>10</integer>
+			<real>15</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.6</string>
+	<string>0.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/mr-pennyworth/alfred-better-dictionaries</string>
 </dict>
