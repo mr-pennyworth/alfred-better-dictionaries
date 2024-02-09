@@ -33,6 +33,9 @@ jobs:
       - name: Extract AlfredExtraPane
         run: unzip AlfredExtraPane.app.zip
 
+      - name: Setup python
+        uses: actions/setup-python@v5
+
       - name: Install libxml2
         run: brew install libxml2
 
