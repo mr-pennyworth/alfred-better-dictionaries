@@ -3,9 +3,11 @@ name: Build and Release
 on: push
 
 jobs:
-  build-and-release:
-    name: Build Alfred workflow and release
-    runs-on: macos-12
+  create-release:
+    name: Create and name a release
+    runs-on: macos-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
 
       - name: Checkout code
@@ -24,6 +26,21 @@ jobs:
           release_name: ${{ env.WF_VERSION }}
           draft: false
           prerelease: false
+
+  build-and-upload-artifacts:
+    name: Build Alfred workflow and upload release artifacts
+    needs: create-release
+    strategy:
+      matrix:
+        os: [macos-12, macos-14] # Intel and Apple Silicon respectively
+    runs-on: ${{ matrix.os }}
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get Workflow Version
+        run: echo "WF_VERSION=$(plutil -extract version xml1 -o - info.plist | sed -n 's/.*<string>\(.*\)<\/string>.*/\1/p')" >> $GITHUB_ENV
 
       # If workflow version didn't change, the create-release thing above will fail, saving us unnecessary builds
 
@@ -51,7 +68,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          upload_url: ${{ needs.create-release.outputs.upload_url }}
           asset_path: ./${{ env.WF_FILENAME }}
-          asset_name: ${{ env.WF_FILENAME }}
+          asset_name: ${{ matrix.os }}.${{ env.WF_FILENAME }}
           asset_content_type: application/zip

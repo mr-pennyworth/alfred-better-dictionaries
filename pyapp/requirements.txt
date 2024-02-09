@@ -1,5 +1,5 @@
 beautifulsoup4==4.8.2
-lxml==4.6.3
+lxml==5.1.0
 meilisearch==0.13.0
 multiprocess==0.70.11.1
 pyinstaller==6.3.0
