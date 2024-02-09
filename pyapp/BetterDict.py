@@ -347,7 +347,9 @@ def search_client(db_path):
 
 def create_index(dict_id, db_path):
   db = search_client(db_path)
-  index = db.create_index(dict_id)
+  task_info = db.create_index(dict_id)
+  db.wait_for_task(task_info.task_uid, timeout_in_ms=10000)
+  index = db.get_index(dict_id)
   index.update_searchable_attributes([
     'title',
     'forms',
@@ -357,7 +359,6 @@ def create_index(dict_id, db_path):
   index.update_ranking_rules([
     'exactness',
     'attribute',
-    'wordsPosition',
     'typo',
     'words',
     'proximity',

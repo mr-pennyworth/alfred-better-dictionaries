@@ -1,0 +1,2 @@
+meilisearch-arm64 filter=lfs diff=lfs merge=lfs -text
+meilisearch-x86_64 filter=lfs diff=lfs merge=lfs -text

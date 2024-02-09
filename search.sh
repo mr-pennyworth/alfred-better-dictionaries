@@ -22,6 +22,7 @@ fi
 
 search_endpoint="http://$IP:$PORT/indexes/$dict_id/search"
 items=$(curl "$search_endpoint" \
+        -H 'Content-Type: application/json' \
         --data "{ \"q\": \"$query\", \"limit\": 9 }" \
         | ./jq '.hits')
 

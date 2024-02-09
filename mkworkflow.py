@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+import platform
 import plistlib
 import shutil
 import subprocess
@@ -108,8 +109,9 @@ def make_export_ready(plist_path):
 
 
 if __name__ == '__main__':
-  subprocess.call(['./mkapp.sh'])
+  subprocess.call(['./mkapps.sh'])
   copy(WF_FILES, BUILD_DIR)
   wf_name = make_export_ready(f'{BUILD_DIR}/info.plist')
+  wf_filename = f'{wf_name}.{platform.machine()}.alfredworkflow'
   with cwd(BUILD_DIR):
-    subprocess.call(['zip', '-r', f'../{wf_name}.alfredworkflow'] + WF_FILES)
+    subprocess.call(['zip', '-r', f'../{wf_filename}'] + WF_FILES)

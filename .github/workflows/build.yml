@@ -70,5 +70,5 @@ jobs:
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
           asset_path: ./${{ env.WF_FILENAME }}
-          asset_name: ${{ matrix.os }}.${{ env.WF_FILENAME }}
+          asset_name: ${{ env.WF_FILENAME }}
           asset_content_type: application/zip

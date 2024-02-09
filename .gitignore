@@ -5,6 +5,7 @@
 *.orig
 *.bkp
 __pycache__
+alfred-dict-server
 dist
 build
 wfbuild
