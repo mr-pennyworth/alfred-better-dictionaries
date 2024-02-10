@@ -60,6 +60,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5F2298EA-894F-4017-BD87-6120B0E7FFF6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA71FA7B-F359-4998-9657-DA10E2644E4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>761778DB-3FD1-4498-9E85-CDE066A12538</key>
 		<array>
 			<dict>
@@ -166,30 +179,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query=$1
-/sayipa "$query"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>sayipa.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>4304F5B0-5EE4-4190-8C7A-3D3BF945DBD9</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -221,34 +210,73 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:dict_id}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>dummy</string>
-						<key>outputlabel</key>
-						<string>dummy-dummy-dummy-dummy</string>
-						<key>uid</key>
-						<string>92307DED-E117-458E-BCD0-06C64248AB1F</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>else</string>
-				<key>hideelse</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+/sayipa "$query"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>sayipa.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4304F5B0-5EE4-4190-8C7A-3D3BF945DBD9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>1</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>dummy</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>F7170828-96FA-4241-A50B-974496E7A1FC</string>
+			<string>CE509E43-D9A7-4B99-AFA6-6FEEB4D26442</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -302,49 +330,34 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>1</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>dummy</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:dict_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>dummy</string>
+						<key>outputlabel</key>
+						<string>dummy-dummy-dummy-dummy</string>
+						<key>uid</key>
+						<string>92307DED-E117-458E-BCD0-06C64248AB1F</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>CE509E43-D9A7-4B99-AFA6-6FEEB4D26442</string>
+			<string>F7170828-96FA-4241-A50B-974496E7A1FC</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -392,6 +405,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>.dict-factory-reset</string>
+				<key>subtext</key>
+				<string>keywoard: '.dict-factory-reset'</string>
+				<key>text</key>
+				<string>Factory Reset BetterDictionary: Clear All Imported</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B1C33335-D970-4488-8953-913D6C7E3D6F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -421,52 +455,6 @@ fi</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>402C89C1-C3F3-4786-9683-19ACD884E06E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>.dict-factory-reset</string>
-				<key>subtext</key>
-				<string>keywoard: '.dict-factory-reset'</string>
-				<key>text</key>
-				<string>Factory Reset BetterDictionary: Clear All Imported</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>B1C33335-D970-4488-8953-913D6C7E3D6F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query=$1
-
-./BetterDict import "$query" "$alfred_workflow_data"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>29F7F338-2B96-43C0-A429-19810757504C</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -518,6 +506,31 @@ fi</string>
 			<string>C6850BD6-BCFE-456F-AF77-59A4F8F5D50A</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+./BetterDict import "$query" "$alfred_workflow_data"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>29F7F338-2B96-43C0-A429-19810757504C</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -600,6 +613,56 @@ END</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>DIR="$alfred_workflow_data"
+
+if [ ! -d "$DIR" ]; then
+   mkdir -p "$DIR"
+fi
+
+open "$DIR"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EA71FA7B-F359-4998-9657-DA10E2644E4F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>.dict-data</string>
+				<key>subtext</key>
+				<string>keywoard: '.dict-data'</string>
+				<key>text</key>
+				<string>Open Dictionary Data Folder</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5F2298EA-894F-4017-BD87-6120B0E7FFF6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>### Setup:
@@ -677,6 +740,13 @@ Subsequent searches should be snappy
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
+		<key>5F2298EA-894F-4017-BD87-6120B0E7FFF6</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
 		<key>6E224CAA-82D7-45F9-9037-58E8D3C2F854</key>
 		<dict>
 			<key>xpos</key>
@@ -730,6 +800,13 @@ Subsequent searches should be snappy
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
+		<key>EA71FA7B-F359-4998-9657-DA10E2644E4F</key>
+		<dict>
+			<key>xpos</key>
+			<real>185</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
 		<key>EAFA3DE4-7416-4CD3-94A2-91E6A70F554B</key>
 		<dict>
 			<key>colorindex</key>
@@ -756,7 +833,7 @@ Subsequent searches should be snappy
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.2.0</string>
+	<string>0.2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/mr-pennyworth/alfred-better-dictionaries</string>
 </dict>
