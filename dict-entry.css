@@ -13,14 +13,15 @@ html
 
 body
 {
-    font-size: 12pt;
     font: -apple-system-body;
     font-family: -apple-system;
     margin-left: 0.9em;
     margin-right: 0.9em;
     margin-top: 1.0em;
     margin-bottom: 1.5em;
-    /* filter: invert(100%); */
+    /* font-size needs to come after font as the included
+       "-apple-system-body" comes with size too. */
+    font-size: calc(var(--result-text-size, 16pt) * 0.75);
 }
 
 html.apple_client-panel body
