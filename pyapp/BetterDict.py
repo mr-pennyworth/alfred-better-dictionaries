@@ -109,7 +109,7 @@ def create_html_file(word, definitions, html_dir):
           <body> {definition} </body>
         </html>'''.encode('utf-8'))
 
-  
+
 def create_html_files(word_defs_map_items, html_dir):
   title = 'Creating HTML files...'
   run_parallely_with_progress_bar(
@@ -119,9 +119,10 @@ def create_html_files(word_defs_map_items, html_dir):
     title=title
   )
 
-  with open(f'{WORKFLOW_DIR}/dict-entry.css', 'rb') as src:
-    with open(f'{html_dir}/dict-entry.css', 'wb') as dst:
-      dst.write(src.read())
+  os.link(
+    src=f'{WORKFLOW_DIR}/dict-entry.css',
+    dst=f'{html_dir}/dict-entry.css',
+  )
 
 
 class AccumulatedIndexer:
@@ -143,7 +144,7 @@ class AccumulatedIndexer:
       ipb.update(message='')
       time.sleep(2)
     ipb.finish()
-      
+
 
 
 def build_index(word_defs_map_items, dict_id, db_path, html_dir):
@@ -376,7 +377,7 @@ def create_index(dict_id, db_path):
     'quicklookurl',
   ])
   return index
-  
+
 
 def list_unimported_dicts(import_base_dir):
   alfreditems = {'items': []}
