@@ -90,8 +90,3 @@ any hotkeys/keywords, follow this:
    New Oxford American Dictionary:     442 MB (html files)
    Combined search index of these two: 730 MB (apart from html)
    ```
-
-### Known Issues
- - The workflow doeesn't work if the theme is `Alfred Classic`.  
-   If you must use that theme, duplicate that theme and use the
-   duplicated one.
