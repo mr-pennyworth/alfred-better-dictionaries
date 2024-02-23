@@ -224,14 +224,21 @@ def all_dict_paths():
   dict_globs = [
     '/System/Library/AssetsV2/**/*.dictionary',
     '/Library/Dictionaries/**/*.dictionary',
-    f'{HOME}/Library/Dictionaries/**/*.dictionary'
+    f'{HOME}/Library/Dictionaries/**/*.dictionary',
   ]
   for dict_glob in dict_globs:
     dict_paths.extend(glob.glob(dict_glob, recursive=True))
   return [
     dict_path for dict_path
     in dict_paths
-    if os.path.exists(f'{dict_path}/Contents/Resources/Body.data')
+    if any(map(os.path.exists, [
+        f'{dict_path}/Contents/Resources/Body.data',
+        # While all dictionaries that come bundled with macOS store Body.data
+        # in the Contents/Resources folder,
+        # https://agiletortoise.com/terminology/mac/ stores the Body.data
+        # directly in the Contents folder.
+        f'{dict_path}/Contents/Body.data',
+    ]))
   ]
 
 
@@ -311,6 +318,11 @@ def import_dict(dict_path, import_base_dir):
   dict_name = get_dict_name(info)
 
   data_path = f'{dict_path}/Contents/Resources/Body.data'
+  if not os.path.exists(data_path):
+    # https://agiletortoise.com/terminology/mac/ stores the Body.data directly
+    # in the Contents folder (and not in Contents/Resources folder).
+    data_path = f'{dict_path}/Contents/Body.data'
+
   dest_dir = f'{import_base_dir}/{dict_id}'
   dest_html_dir = f'{dest_dir}/html'
   db_path = f'{import_base_dir}/db'
