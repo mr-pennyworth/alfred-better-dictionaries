@@ -241,7 +241,13 @@ def get_dict_id(info):
 
 
 def get_dict_name(info):
-  return info['CFBundleDisplayName']
+  return info.get(
+    'CFBundleDisplayName',
+    info.get(
+      'CFBundleName',
+      info['CFBundleIdentifier'],
+    )
+  )
 
 
 def create_workflow_objects(dict_name, dict_id):
@@ -390,14 +396,17 @@ def list_unimported_dicts(import_base_dir):
       imported = [i['title'] for i in json.load(f)['items']]
 
   for dict_path in all_dict_paths():
-    info = dict_info(dict_path)
-    dict_name = get_dict_name(info)
-    if dict_name in imported:
-      continue
-    alfreditems['items'].append({
-      'title': dict_name,
-      'arg': dict_path
-    })
+    try:
+      info = dict_info(dict_path)
+      dict_name = get_dict_name(info)
+      if dict_name in imported:
+        continue
+      alfreditems['items'].append({
+        'title': dict_name,
+        'arg': dict_path
+      })
+    except Exception as e:
+      print(f'Unable to process "{dict_path}": {e}', file=sys.stderr)
   print(json.dumps(alfreditems, indent=2))
 
 
