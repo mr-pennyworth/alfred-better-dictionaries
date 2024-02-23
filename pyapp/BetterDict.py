@@ -256,6 +256,10 @@ def create_workflow_objects(dict_name, dict_id):
   # Functional:
   junction = wf.newJunction()
   hotkey = wf.newHotkey(note=dict_name)
+  fallback_search = wf.newFallbackSearch(
+    note=dict_name,
+    title=f'search {dict_name}',
+  )
   script_filter = wf.newBashScriptFilter(
     note=dict_name,
     title=f'search {dict_name}',
@@ -270,6 +274,7 @@ def create_workflow_objects(dict_name, dict_id):
   ipa_player = wf.getObjWithLabel('Play pronunciation audio')
   html_opener = wf.getObjWithLabel('Open definition in browser')
   wf.connect(src=hotkey, dst=script_filter)
+  wf.connect(src=fallback_search, dst=script_filter)
   wf.connect(src=junction, dst=script_filter)
   wf.connect(src=script_filter, dst=ipa_player, mod=wf.CMD)
   wf.connect(src=script_filter, dst=html_opener)
@@ -278,6 +283,7 @@ def create_workflow_objects(dict_name, dict_id):
   # Presentational:
   dummy_junction = wf.getObjWithLabel('dummy junction')
   dummy_hotkey = wf.getObjWithLabel('dummy hotkey')
+  dummy_fallback_search = wf.getObjWithLabel('dummy fallback search')
   dummy_script_filter = wf.getObjWithLabel('dummy script filter')
 
   row_count = wf.getOutputCount(router)
@@ -287,6 +293,9 @@ def create_workflow_objects(dict_name, dict_id):
 
   wf.setX(hotkey, wf.x(dummy_hotkey))
   wf.setY(hotkey, wf.y(dummy_hotkey) + VERT_OFFSET)
+
+  wf.setX(fallback_search, wf.x(dummy_fallback_search))
+  wf.setY(fallback_search, wf.y(dummy_fallback_search) + VERT_OFFSET)
 
   wf.setX(script_filter, wf.x(dummy_script_filter))
   wf.setY(script_filter, wf.y(dummy_script_filter) + VERT_OFFSET)

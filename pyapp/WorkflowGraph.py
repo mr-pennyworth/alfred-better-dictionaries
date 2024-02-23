@@ -71,6 +71,26 @@ class WorkflowGraph:
     self.wf['connections'][hotkey_uuid] = []
     return hotkey
 
+  def newFallbackSearch(self, note, title):
+    fallback_search_uuid = mkuid()
+    fallback_search = {
+      'type': 'alfred.workflow.trigger.fallback',
+      'uid': fallback_search_uuid,
+      'version': 1,
+      'config': {
+        'text': title,
+      },
+    }
+    self.wf['objects'].append(fallback_search)
+    self.wf['uidata'][fallback_search_uuid] = {
+      'note': note,
+      'noexport': 1,
+      'xpos': 0,
+      'ypos': 0,
+    }
+    self.wf['connections'][fallback_search_uuid] = []
+    return fallback_search
+
   def newBashScriptFilter(self, title, script, note):
     script_filter_uuid = mkuid()
     script_filter = {

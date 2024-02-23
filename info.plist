@@ -8,6 +8,19 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>144E72F0-97B5-44B6-BFB2-163409B9019B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CE509E43-D9A7-4B99-AFA6-6FEEB4D26442</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>18D17FBB-4E03-4E94-9802-19E31E8C516C</key>
 		<array>
 			<dict>
@@ -189,6 +202,19 @@
 	<string>Better Dictionaries</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>text</key>
+				<string>dummy</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.fallback</string>
+			<key>uid</key>
+			<string>144E72F0-97B5-44B6-BFB2-163409B9019B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -787,6 +813,17 @@ Subsequent searches should be snappy
 			<key>ypos</key>
 			<real>195</real>
 		</dict>
+		<key>144E72F0-97B5-44B6-BFB2-163409B9019B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>dummy fallback search</string>
+			<key>xpos</key>
+			<real>810</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
 		<key>18D17FBB-4E03-4E94-9802-19E31E8C516C</key>
 		<dict>
 			<key>xpos</key>
@@ -901,7 +938,7 @@ Subsequent searches should be snappy
 			<key>note</key>
 			<string>dummy script filter</string>
 			<key>xpos</key>
-			<real>840</real>
+			<real>970</real>
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
@@ -938,7 +975,7 @@ Subsequent searches should be snappy
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.2.6</string>
+	<string>0.2.7</string>
 	<key>webaddress</key>
 	<string>https://github.com/mr-pennyworth/alfred-better-dictionaries</string>
 </dict>
