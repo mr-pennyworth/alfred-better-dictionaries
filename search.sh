@@ -10,6 +10,7 @@ function is_server_up() {
 }
 
 function start_server() {
+  mkdir -p "$alfred_workflow_data"
   ./alfred-dict-server \
      --db-path "$alfred_workflow_data/db" \
      --http-payload-size-limit 1000000000 \
