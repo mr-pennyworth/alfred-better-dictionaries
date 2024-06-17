@@ -7,13 +7,20 @@ chmod +x ./BetterDict
 chmod +x ./alfred-dict-server
 chmod +x ./jq
 
-xattr -d com.apple.quarantine ./AlfredExtraPane.app
-xattr -d com.apple.quarantine ./alfred-dict-server
-xattr -d com.apple.quarantine ./BetterDict
-xattr -d com.apple.quarantine ./cocoaDialog.app
-xattr -d com.apple.quarantine ./jq
+function deQuarantine {
+  # If the extended attribute doesn't exist, don't bother
+  # printing the error "No such xattr...", as those messages
+  # can be mistaken as "errors".
+  xattr -d com.apple.quarantine "$1" 2> /dev/null
+}
+
+deQuarantine ./AlfredExtraPane.app
+deQuarantine ./alfred-dict-server
+deQuarantine ./BetterDict
+deQuarantine ./cocoaDialog.app
+deQuarantine ./jq
 
 open ./AlfredExtraPane.app
 
 # Kill instances running from previous version of workflow
-killall alfred-dict-server
+killall -q alfred-dict-server
