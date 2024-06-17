@@ -845,7 +845,7 @@ Subsequent searches should be snappy
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>770</real>
+			<real>720</real>
 		</dict>
 		<key>29F7F338-2B96-43C0-A429-19810757504C</key>
 		<dict>
@@ -882,7 +882,7 @@ Subsequent searches should be snappy
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>655</real>
+			<real>610</real>
 		</dict>
 		<key>6E224CAA-82D7-45F9-9037-58E8D3C2F854</key>
 		<dict>
@@ -907,13 +907,10 @@ Subsequent searches should be snappy
 			<key>xpos</key>
 			<real>185</real>
 			<key>ypos</key>
-			<real>770</real>
+			<real>720</real>
 		</dict>
 		<key>96B75A90-A8B0-4B61-85E7-91F01F0835E3</key>
 		<dict>
-			<key>note</key>
-			<string>- de-quarantine
-- grant permissions</string>
 			<key>xpos</key>
 			<real>185</real>
 			<key>ypos</key>
@@ -949,7 +946,7 @@ Subsequent searches should be snappy
 			<key>xpos</key>
 			<real>185</real>
 			<key>ypos</key>
-			<real>655</real>
+			<real>610</real>
 		</dict>
 		<key>EAFA3DE4-7416-4CD3-94A2-91E6A70F554B</key>
 		<dict>
