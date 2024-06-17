@@ -20,6 +20,7 @@ deQuarantine ./BetterDict
 deQuarantine ./cocoaDialog.app
 deQuarantine ./jq
 
+defaults write com.runningwithcrayons.Alfred experimental.presssecretary -bool YES
 open ./AlfredExtraPane.app
 
 # Kill instances running from previous version of workflow
