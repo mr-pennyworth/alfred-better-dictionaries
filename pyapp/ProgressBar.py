@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import time
-
-from multiprocess import Process, Queue
 from subprocess import Popen, PIPE
 
-import alfred
+from multiprocess import Process, Queue
 
+import alfred
 
 WORKFLOW_DIR = alfred.get_workflow_dir()
 CD_PATH = f"{WORKFLOW_DIR}/cocoaDialog.app/Contents/MacOS/cocoaDialog"

@@ -2,29 +2,25 @@
 
 import glob
 import json
-import meilisearch
 import os
 import plistlib
 import re
-import requests
 import shutil
 import sys
 import time
-
 from base64 import b16encode
-from bs4 import BeautifulSoup
 from collections import defaultdict
-from multiprocess import Pool
 from struct import unpack
 from subprocess import *
 from zlib import decompress
 
-import alfred
+import meilisearch
+from bs4 import BeautifulSoup
 
+import alfred
 from ProgressBar import IndefiniteProgressBar
 from ProgressBar import run_parallely_with_progress_bar
 from WorkflowGraph import WorkflowGraph
-
 
 HOME = os.path.expanduser("~")
 SEARCH_IP = os.environ.get("SEARCH_IP", "127.0.0.1")
