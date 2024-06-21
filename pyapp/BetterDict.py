@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import glob
-import io
 import json
 import os
 import plistlib
@@ -14,12 +13,12 @@ from base64 import b16encode
 from collections import defaultdict
 from struct import unpack
 from subprocess import *
-from zlib import decompress
 
 import meilisearch
 from bs4 import BeautifulSoup
 
 import alfred
+import appledict
 from ProgressBar import IndefiniteProgressBar
 from ProgressBar import run_parallely_with_progress_bar
 from WorkflowGraph import WorkflowGraph
@@ -34,57 +33,24 @@ def read_int(f: typing.BinaryIO) -> int:
     return unpack("i", f.read(4))[0]
 
 
-# original source for parsing the '.dictionary' format:
-# https://gist.github.com/josephg/5e134adf70760ee7e49d
 def get_word_defs_map(dict_data_path):
     """returns a dict where key is the word
     and value is a list of its definitions."""
     word_to_defs_map = defaultdict(list)
 
-    # dict_data_path is path to a Body.data file in an Apple dictionary
-    with open(dict_data_path, "rb") as f:
-        # first 64 bytes of a Body.data file are always all-zeroes,
-        # skip them
-        f.seek(0x40)
-
-        # The next four bytes represent an integer denoting remaining
-        # number of bytes in the Body.data file
-        limit = 0x40 + read_int(f)
-
-        # TODO: for 'HeapDataCompressionType': 2 (in Info.plist),
-        #  we need to skip to byte number 96, but not if it is 1.
-        f.seek(0x60)
-
-        while f.tell() < limit:
-            # a Body.data file can contain multiple sections with the format:
-            # [section_size      (4 bytes (not including itself)),
-            #  ???               (4 bytes), (no idea what these are!)
-            #  decompressed_size (4 bytes),
-            #  compressed_data   (section_size-8 bytes)]
-            compressed_size = read_int(f) - 8
-            _ = f.read(4)  # no idea about these 4 bytes
-            decompressed_size = read_int(f)
-            decompressed = io.BytesIO(decompress(f.read(compressed_size)))
-
-            while decompressed.tell() < decompressed_size:
-                # each decompressed chunk contains multiple definitions
-                # each definition is of the format:
-                # [defn_size (4 bytes (not including itself)),
-                #  XML defn  (defn_size bytes)]
-                defn_size = read_int(decompressed)
-                defn = decompressed.read(defn_size).decode("utf-8")
-
-                # Example XML defn opening tag:
-                # <d:entry
-                #   xmlns:d=".apple.com/DTDs/DictionaryService-1.0.rng"
-                #   id="m_en_gbus0134270"
-                #   d:title="apple"
-                #   class="entry">
-                # The principled way to find the word being defined
-                # would be to parse the XML and then get 'd:title' from it,
-                # however, that's too slow, so we resort to regex matching.
-                word = re.search('d:title="(.*?)"', defn).group(1)
-                word_to_defs_map[word].append(defn)
+    dict_body = appledict.DictBody(dict_data_path)
+    for defn in dict_body.definitions():
+        # Example XML defn opening tag:
+        # <d:entry
+        #   xmlns:d=".apple.com/DTDs/DictionaryService-1.0.rng"
+        #   id="m_en_gbus0134270"
+        #   d:title="apple"
+        #   class="entry">
+        # The principled way to find the word being defined
+        # would be to parse the XML and then get 'd:title' from it,
+        # however, that's too slow, so we resort to regex matching.
+        word = re.search('d:title="(.*?)"', defn).group(1)
+        word_to_defs_map[word].append(defn)
     return word_to_defs_map
 
 
