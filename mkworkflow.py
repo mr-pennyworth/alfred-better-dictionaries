@@ -2,12 +2,11 @@
 
 import os
 import platform
-import plistlib
 import shutil
 import subprocess
-
 from contextlib import contextmanager
 
+from pyapp import plist
 
 BUILD_DIR = "wfbuild"
 WF_FILES = [
@@ -39,16 +38,6 @@ def copy(filenames, dest_folder):
             shutil.copy(filename, f"{dest_folder}/{filename}")
 
 
-def plistRead(path):
-    with open(path, "rb") as f:
-        return plistlib.load(f)
-
-
-def plistWrite(obj, path):
-    with open(path, "wb") as f:
-        return plistlib.dump(obj, f)
-
-
 @contextmanager
 def cwd(dir):
     old_wd = os.path.abspath(os.curdir)
@@ -58,7 +47,7 @@ def cwd(dir):
 
 
 def make_export_ready(plist_path):
-    wf = plistRead(plist_path)
+    wf = plist.read(plist_path)
 
     # remove noexport vars
     wf["variablesdontexport"] = []
@@ -104,7 +93,7 @@ def make_export_ready(plist_path):
     with open("README.md") as f:
         wf["readme"] = f.read()
 
-    plistWrite(wf, plist_path)
+    plist.dump(wf, plist_path)
     return wf["name"]
 
 

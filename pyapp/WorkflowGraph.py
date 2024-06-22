@@ -1,21 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import plistlib
 import uuid
+
+import plist
 
 
 def mkuid():
     return f"{uuid.uuid4()}".upper()
-
-
-def plistRead(path):
-    with open(path, "rb") as f:
-        return plistlib.load(f)
-
-
-def plistWrite(obj, path):
-    with open(path, "wb") as f:
-        return plistlib.dump(obj, f)
 
 
 class WorkflowGraph:
@@ -24,7 +15,7 @@ class WorkflowGraph:
 
     def __init__(self, plist_path):
         self.plist_path = plist_path
-        self.wf = plistRead(self.plist_path)
+        self.wf = plist.read(self.plist_path)
 
     def newJunction(self):
         junction_uuid = mkuid()
@@ -180,4 +171,4 @@ class WorkflowGraph:
         return len(router["config"]["conditions"])
 
     def save(self):
-        plistWrite(self.wf, self.plist_path)
+        plist.dump(self.wf, self.plist_path)

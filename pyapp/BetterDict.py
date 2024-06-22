@@ -3,7 +3,6 @@
 import glob
 import json
 import os
-import plistlib
 import re
 import shutil
 import sys
@@ -19,6 +18,7 @@ from bs4 import BeautifulSoup
 
 import alfred
 import appledict
+import plist
 from ProgressBar import IndefiniteProgressBar
 from ProgressBar import run_parallely_with_progress_bar
 from WorkflowGraph import WorkflowGraph
@@ -56,11 +56,6 @@ def get_word_defs_map(dict_data_path):
         word = re.search('d:title="(.*?)"', defn).group(1)
         word_to_defs_map[word].append(defn)
     return word_to_defs_map
-
-
-def readPlist(plist_path):
-    with open(plist_path, "rb") as f:
-        return plistlib.load(f)
 
 
 def base16(input_str):
@@ -209,7 +204,7 @@ def make_alfred_item(word, filename, definition, html_dir):
 
 
 def dict_info(dict_path):
-    return readPlist(f"{dict_path}/Contents/Info.plist")
+    return plist.read(f"{dict_path}/Contents/Info.plist")
 
 
 def all_dict_paths():
