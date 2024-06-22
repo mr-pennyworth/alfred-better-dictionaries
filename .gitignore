@@ -4,6 +4,7 @@
 *.alfredworkflow
 *.orig
 *.bkp
+*.spec
 __pycache__
 alfred-dict-server
 dist
@@ -11,5 +12,4 @@ build
 jq
 wfbuild
 AlfredExtraPane.app
-BetterDict
-BetterDict.spec
+python

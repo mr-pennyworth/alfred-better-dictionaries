@@ -29,6 +29,10 @@ SEARCH_PORT = os.environ.get("SEARCH_PORT", "6789")
 WORKFLOW_DIR = alfred.get_workflow_dir()
 
 
+def noop():
+    pass
+
+
 def read_int(f: typing.BinaryIO) -> int:
     return unpack("i", f.read(4))[0]
 

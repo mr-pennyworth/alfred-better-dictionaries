@@ -25,4 +25,4 @@ chmod +x jq
 
 # Build the python scripts into a standalone binary
 pip3 install -r pyapp/requirements.txt
-pyinstaller pyapp/BetterDict.py --onefile --noconfirm --distpath ./
+pyinstaller pyapp/python.py --onefile --noconfirm --distpath ./

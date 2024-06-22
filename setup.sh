@@ -3,7 +3,7 @@
 # Make a copy of the original 'factory-version' workflow
 cp info.plist info.plist.orig
 
-chmod +x ./BetterDict
+chmod +x ./python
 chmod +x ./alfred-dict-server
 chmod +x ./jq
 
@@ -16,7 +16,7 @@ function deQuarantine {
 
 deQuarantine ./AlfredExtraPane.app
 deQuarantine ./alfred-dict-server
-deQuarantine ./BetterDict
+deQuarantine ./python
 deQuarantine ./cocoaDialog.app
 deQuarantine ./jq
 
