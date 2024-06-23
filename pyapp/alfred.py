@@ -22,3 +22,9 @@ def get_workflow_dir():
         return infer_workflow_dir()
 
     return f"{prefs_dir}/workflows/{workflow_uid}"
+
+
+def default_workflow_data_dir(workflow_id):
+    return os.path.expanduser(
+        f"~/Library/Application Support/Alfred/Workflow Data/{workflow_id}"
+    )

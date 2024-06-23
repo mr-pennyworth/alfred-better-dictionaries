@@ -13,6 +13,7 @@ from collections import defaultdict
 from struct import unpack
 from subprocess import *
 
+import click
 import meilisearch
 from bs4 import BeautifulSoup
 
@@ -27,6 +28,8 @@ HOME = os.path.expanduser("~")
 SEARCH_IP = os.environ.get("SEARCH_IP", "127.0.0.1")
 SEARCH_PORT = os.environ.get("SEARCH_PORT", "6789")
 WORKFLOW_DIR = alfred.get_workflow_dir()
+WORKFLOW_ID = plist.read(f"{WORKFLOW_DIR}/info.plist")["bundleid"]
+DEFAULT_WORKFLOW_DATA_DIR = alfred.default_workflow_data_dir(WORKFLOW_ID)
 
 
 def noop():
@@ -427,24 +430,50 @@ def list_unimported_dicts(import_base_dir):
     print(json.dumps(alfreditems, indent=2))
 
 
-def factory_reset(base_dir):
-    shutil.rmtree(base_dir)
+@click.group()
+def main():
+    pass
+
+
+@main.command()
+@click.argument(
+    "workflow_data_dir",
+    type=click.Path(exists=True, file_okay=False, resolve_path=True),
+    envvar="alfred_workflow_data",
+    default=DEFAULT_WORKFLOW_DATA_DIR,
+)
+def list_unimported(workflow_data_dir: str):
+    list_unimported_dicts(workflow_data_dir)
+
+
+@main.command(name="import")
+@click.argument(
+    "dict_path",
+    type=click.Path(exists=True, file_okay=False, resolve_path=True),
+)
+@click.argument(
+    "workflow_data_dir",
+    type=click.Path(exists=True, file_okay=False, resolve_path=True),
+    envvar="alfred_workflow_data",
+    default=DEFAULT_WORKFLOW_DATA_DIR,
+)
+def import_(dict_path: str, workflow_data_dir: str):
+    import_dict(dict_path, workflow_data_dir)
+
+
+@main.command()
+@click.argument(
+    "workflow_data_dir",
+    type=click.Path(exists=True, file_okay=False, resolve_path=True),
+    envvar="alfred_workflow_data",
+    default=DEFAULT_WORKFLOW_DATA_DIR,
+)
+def factory_reset(workflow_data_dir: str):
+    shutil.rmtree(workflow_data_dir)
     shutil.copy(f"{WORKFLOW_DIR}/info.plist", f"{WORKFLOW_DIR}/info.plist.bkp")
     shutil.copy(f"{WORKFLOW_DIR}/info.plist.orig", f"{WORKFLOW_DIR}/info.plist")
-
-
-def fullpath(p):
-    return os.path.abspath(os.path.expanduser(p))
+    os.mkdir(workflow_data_dir)
 
 
 if __name__ == "__main__":
-    command = sys.argv[1]
-    if command == "listUnimported":
-        base_dir = fullpath(sys.argv[2])
-        list_unimported_dicts(base_dir)
-    elif command == "import":
-        dict_path, base_dir = map(fullpath, sys.argv[2:4])
-        import_dict(dict_path, base_dir)
-    elif command == "factoryReset":
-        base_dir = fullpath(sys.argv[2])
-        factory_reset(base_dir)
+    main()

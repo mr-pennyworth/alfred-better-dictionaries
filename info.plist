@@ -460,7 +460,7 @@
 
 if [ "$(confirm)" = "1" ]; then
   killall alfred-dict-server
-  ./python pyapp/BetterDict.py factoryReset "$alfred_workflow_data"
+  ./python pyapp/BetterDict.py factory-reset "$alfred_workflow_data"
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -552,7 +552,7 @@ mkdir -p "$alfred_workflow_data"
 				<string>loading...</string>
 				<key>script</key>
 				<string>mkdir -p "$alfred_workflow_data"
-./python pyapp/BetterDict.py listUnimported "$alfred_workflow_data"</string>
+./python pyapp/BetterDict.py list-unimported "$alfred_workflow_data"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

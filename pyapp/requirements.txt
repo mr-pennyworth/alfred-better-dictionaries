@@ -1,4 +1,5 @@
 beautifulsoup4==4.8.2
+click==8.1.7
 lxml==5.1.0
 meilisearch==0.30.0
 multiprocess==0.70.11.1
