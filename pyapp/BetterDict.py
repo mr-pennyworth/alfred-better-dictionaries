@@ -408,8 +408,8 @@ def create_index(dict_id, db_path):
     return index
 
 
-def list_unimported_dicts(import_base_dir):
-    alfreditems = {"items": []}
+def list_unimported_dicts(import_base_dir) -> list[alfred.Item]:
+    alfreditems = []
 
     imported = []
     imported_json_path = f"{import_base_dir}/imported.json"
@@ -424,10 +424,10 @@ def list_unimported_dicts(import_base_dir):
             dict_name = get_dict_name(info)
             if dict_name in imported:
                 continue
-            alfreditems["items"].append({"title": dict_name, "arg": dict_path})
+            alfreditems.append(alfred.Item(title=dict_name, arg=dict_path))
         except Exception as e:
             print(f'Unable to process "{dict_path}": {e}', file=sys.stderr)
-    print(json.dumps(alfreditems, indent=2))
+    return alfreditems
 
 
 @click.group()
@@ -443,7 +443,8 @@ def main():
     default=DEFAULT_WORKFLOW_DATA_DIR,
 )
 def list_unimported(workflow_data_dir: str):
-    list_unimported_dicts(workflow_data_dir)
+    unimported = list_unimported_dicts(workflow_data_dir)
+    print(json.dumps({"items": [d.as_dict() for d in unimported]}, indent=2))
 
 
 @main.command(name="import")
