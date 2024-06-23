@@ -127,13 +127,13 @@ class AccumulatedIndexer:
         self.items.extend(items)
 
     def finish(self):
-        updateId = self.index.add_documents(self.items)["updateId"]
+        task_info = self.index.add_documents(self.items)
 
         def status():
-            return self.index.get_update_status(updateId)["status"]
+            return self.index.get_task(task_info.task_uid).status
 
         ipb = IndefiniteProgressBar(title="Waiting for index to be ready...")
-        while (s := status()) != "processed":
+        while (s := status()) != "succeeded":
             ipb.update(message="")
             time.sleep(2)
         ipb.finish()
