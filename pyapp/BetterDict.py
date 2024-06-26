@@ -369,8 +369,11 @@ def search_client(db_path):
     if not is_search_server_up():
         start_search_server(db_path)
     while not is_search_server_up():
-        time.sleep(0.01)
-    return meilisearch.Client(f"http://{SEARCH_IP}:{SEARCH_PORT}")
+        time.sleep(0.1)
+    client = meilisearch.Client(f"http://{SEARCH_IP}:{SEARCH_PORT}")
+    while not client.is_healthy():
+        time.sleep(0.1)
+    return client
 
 
 def create_index(dict_id, db_path):
