@@ -30,12 +30,8 @@ Better search and live previews for built-in macOS dictionaries.
  - Import any compatible dictionary
 
 
-### Setup
-After importing the workflow, type `.setup-better-dictionaries` into Alfred.
-
-
 ### Importing a Dictionary
-After setup, type `.dict-import` into Alfred.
+After importing the workflow, type `.dict-import` into Alfred.
 ![](images/import-any.png)
 Select the dictionary you want to import.  
 

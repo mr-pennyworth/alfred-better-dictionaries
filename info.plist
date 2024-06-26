@@ -34,19 +34,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>1F752B51-8F34-42C7-B6EE-3DBFE003C773</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>96B75A90-A8B0-4B61-85E7-91F01F0835E3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>20D38440-F936-46C0-B86E-DBD7028AFDB7</key>
 		<array>
 			<dict>
@@ -552,6 +539,7 @@ mkdir -p "$alfred_workflow_data"
 				<string>loading...</string>
 				<key>script</key>
 				<string>mkdir -p "$alfred_workflow_data"
+./setup.sh
 ./python pyapp/BetterDict.py list-unimported "$alfred_workflow_data"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -591,66 +579,6 @@ mkdir -p "$alfred_workflow_data"
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>6E224CAA-82D7-45F9-9037-58E8D3C2F854</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>#!/bin/bash
-
-chmod +x ./jq
-chmod +x ./alfred-dict-server
-
-xattr -d com.apple.quarantine ./AlfredExtraPane.app
-xattr -d com.apple.quarantine ./jq
-xattr -d com.apple.quarantine ./alfred-dict-server
-
-open ./AlfredExtraPane.app
-
-open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
-osascript &lt;&lt;END
-  tell application "System Preferences"
-    activate
-  end tell
-END</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>setup.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>96B75A90-A8B0-4B61-85E7-91F01F0835E3</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>.setup-better-dictionaries</string>
-				<key>subtext</key>
-				<string>.setup-better-dictionaries</string>
-				<key>text</key>
-				<string>Setup Better Dictionaries</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>1F752B51-8F34-42C7-B6EE-3DBFE003C773</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -784,12 +712,7 @@ EOF</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>### Setup:
-After importing, first type `.setup-better-dictionaries`
-into alfred (without the quotes)
-
-
-### Note:
+	<string>### Note:
 After each mac restart, for the first time when you run
 the workflow, expect a comparatively slower search.
 Subsequent searches should be snappy
@@ -833,19 +756,12 @@ Subsequent searches should be snappy
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
-		<key>1F752B51-8F34-42C7-B6EE-3DBFE003C773</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>500</real>
-		</dict>
 		<key>20D38440-F936-46C0-B86E-DBD7028AFDB7</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>720</real>
+			<real>610</real>
 		</dict>
 		<key>29F7F338-2B96-43C0-A429-19810757504C</key>
 		<dict>
@@ -882,7 +798,7 @@ Subsequent searches should be snappy
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>500</real>
 		</dict>
 		<key>6E224CAA-82D7-45F9-9037-58E8D3C2F854</key>
 		<dict>
@@ -907,7 +823,7 @@ Subsequent searches should be snappy
 			<key>xpos</key>
 			<real>185</real>
 			<key>ypos</key>
-			<real>720</real>
+			<real>610</real>
 		</dict>
 		<key>96B75A90-A8B0-4B61-85E7-91F01F0835E3</key>
 		<dict>
@@ -946,7 +862,7 @@ Subsequent searches should be snappy
 			<key>xpos</key>
 			<real>185</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>500</real>
 		</dict>
 		<key>EAFA3DE4-7416-4CD3-94A2-91E6A70F554B</key>
 		<dict>
@@ -974,7 +890,7 @@ Subsequent searches should be snappy
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.2.13</string>
+	<string>0.2.14</string>
 	<key>webaddress</key>
 	<string>https://github.com/mr-pennyworth/alfred-better-dictionaries</string>
 </dict>

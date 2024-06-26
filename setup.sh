@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Make a copy of the original 'factory-version' workflow
-cp info.plist info.plist.orig
+if [ ! -f info.plist.orig ]; then
+  cp info.plist info.plist.orig
+fi
 
 chmod +x ./python
 chmod +x ./alfred-dict-server
