@@ -7,7 +7,7 @@
 
 html
 {
-    background-color: var(--window-color, #1d1e28);
+    background-color: transparent;
     color: var(--result-text-color, #eee);
 }
 
