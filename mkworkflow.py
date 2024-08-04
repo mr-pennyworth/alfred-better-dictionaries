@@ -14,6 +14,7 @@ WF_FILES = [
     "alfred-dict-server",
     "cocoaDialog.app",
     "dict-entry.css",
+    "extra-pane-config.json",
     "icon.png",
     "info.plist",
     "jq",

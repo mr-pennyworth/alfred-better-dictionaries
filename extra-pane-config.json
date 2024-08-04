@@ -1,0 +1,5 @@
+[{
+  "alignment" : {
+    "horizontal" : {"placement" : "right", "width" : 300, "minHeight" : 400}},
+  "customCSSFilename": "dict-entry.css"
+}]
