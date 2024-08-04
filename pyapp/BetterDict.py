@@ -97,7 +97,6 @@ def create_html_file(word, definitions, html_dir):
         <html lang="en">
           <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <link rel="stylesheet" href="dict-entry.css">
           </head>
           <body> {definition} </body>
         </html>""".encode(
@@ -113,11 +112,6 @@ def create_html_files(word_defs_map_items, html_dir):
         func=lambda x: create_html_file(x[0], x[1], html_dir),
         msgfunc=lambda x: x[0],
         title=title,
-    )
-
-    os.link(
-        src=f"{WORKFLOW_DIR}/dict-entry.css",
-        dst=f"{html_dir}/dict-entry.css",
     )
 
 

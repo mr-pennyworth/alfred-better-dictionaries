@@ -21,7 +21,7 @@ body
     margin-bottom: 1.5em;
     /* font-size needs to come after font as the included
        "-apple-system-body" comes with size too. */
-    font-size: calc(var(--result-text-size, 16pt) * 0.75);
+    font-size: calc(var(--result-text-size, 16pt) * 0.85);
 }
 
 html.apple_client-panel body
