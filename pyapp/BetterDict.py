@@ -233,8 +233,10 @@ def all_dict_paths():
 
 
 def get_dict_id(info):
-    # meilisearch index doesn't allow periods in name
-    return info["CFBundleIdentifier"].replace(".", "-")
+    # meilisearch index only allows alphanumeric characters, hyphens, and
+    # underscores in the index name, so replace all other characters with
+    # hyphens.
+    return re.sub(r"[^a-zA-Z0-9_-]", "-", info["CFBundleIdentifier"])
 
 
 def get_dict_name(info):
