@@ -68,6 +68,10 @@ any hotkeys/keywords, follow this:
 
 
 ### Notes and Warnings
+ - On first run after importing/upgrading the workflow, BetterDict bootstraps
+   a local Python environment in Alfred Workflow Data. This can take a bit
+   longer than normal startup.
+
  - Importing a dictionary could take as much as 30 minutes
    on old machines or if there's significant CPU activity from other apps.
 

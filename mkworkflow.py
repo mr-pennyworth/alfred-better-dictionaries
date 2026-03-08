@@ -19,7 +19,7 @@ WF_FILES = [
     "info.plist",
     "jq",
     "pyapp",
-    "python",
+    "uv",
     "README.md",
     "sayipa.sh",
     "search.sh",
