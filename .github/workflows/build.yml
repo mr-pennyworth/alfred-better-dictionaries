@@ -32,8 +32,8 @@ jobs:
     needs: create-release
     strategy:
       matrix:
-        os: [macos-12, macos-14] # Intel and Apple Silicon respectively
-    runs-on: ${{ matrix.os }}
+        target_arch: [x86_64, arm64]
+    runs-on: macos-latest
     steps:
 
       - name: Checkout code
@@ -57,6 +57,9 @@ jobs:
         run: brew install libxml2
 
       - name: Build Workflow
+        env:
+          TARGET_ARCH: ${{ matrix.target_arch }}
+          WF_ARCH: ${{ matrix.target_arch }}
         run: python3 mkworkflow.py
 
       - name: Get Workflow Filename

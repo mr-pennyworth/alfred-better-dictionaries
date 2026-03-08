@@ -2,7 +2,7 @@
 set -euo pipefail
 set -o xtrace
 
-ARCH=$(uname -m)
+ARCH="${TARGET_ARCH:-$(uname -m)}"
 
 MEILISEARCH_RELEASE_URL="https://github.com/meilisearch/meilisearch/releases"
 MS_INTEL="$MEILISEARCH_RELEASE_URL/download/v1.6.1/meilisearch-macos-amd64"
@@ -22,11 +22,14 @@ if [ "$ARCH" = "x86_64" ]; then
   curl -L $JQ_INTEL -o jq
   curl -L $UV_INTEL -o uv.tar.gz
   UV_DIR="uv-x86_64-apple-darwin"
-else
+elif [ "$ARCH" = "arm64" ] || [ "$ARCH" = "aarch64" ]; then
   curl -L $MS_APPLE -o alfred-dict-server
   curl -L $JQ_APPLE -o jq
   curl -L $UV_APPLE -o uv.tar.gz
   UV_DIR="uv-aarch64-apple-darwin"
+else
+  echo "Unsupported TARGET_ARCH: $ARCH" >&2
+  exit 1
 fi
 
 chmod +x alfred-dict-server

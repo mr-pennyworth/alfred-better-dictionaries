@@ -102,6 +102,7 @@ if __name__ == "__main__":
     subprocess.call(["./mkapps.sh"])
     copy(WF_FILES, BUILD_DIR)
     wf_name = make_export_ready(f"{BUILD_DIR}/info.plist")
-    wf_filename = f"{wf_name}.{platform.machine()}.alfredworkflow"
+    wf_arch = os.environ.get("WF_ARCH", platform.machine())
+    wf_filename = f"{wf_name}.{wf_arch}.alfredworkflow"
     with cwd(BUILD_DIR):
         subprocess.call(["zip", "-r", f"../{wf_filename}"] + WF_FILES)
