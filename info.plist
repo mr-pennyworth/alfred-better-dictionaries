@@ -323,7 +323,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>keywoard: 'lookup'</string>
+				<string>keyword: 'lookup'</string>
 				<key>title</key>
 				<string>Look a word up in a BetterDictionary</string>
 				<key>type</key>
@@ -471,7 +471,7 @@ fi</string>
 				<key>keyword</key>
 				<string>.dict-factory-reset</string>
 				<key>subtext</key>
-				<string>keywoard: '.dict-factory-reset'</string>
+				<string>keyword: '.dict-factory-reset'</string>
 				<key>text</key>
 				<string>Factory Reset BetterDictionary: Clear All Imported</string>
 				<key>withspace</key>
@@ -546,7 +546,7 @@ mkdir -p "$alfred_workflow_data"
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>keywoard: '.dict-import'</string>
+				<string>keyword: '.dict-import'</string>
 				<key>title</key>
 				<string>Import a dictionary into BetterDictionary</string>
 				<key>type</key>
@@ -590,7 +590,7 @@ mkdir -p "$alfred_workflow_data"
 				<key>keyword</key>
 				<string>.dict-data</string>
 				<key>subtext</key>
-				<string>keywoard: '.dict-data'</string>
+				<string>keyword: '.dict-data'</string>
 				<key>text</key>
 				<string>Open Dictionary Data Folder</string>
 				<key>withspace</key>
