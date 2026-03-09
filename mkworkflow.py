@@ -21,6 +21,7 @@ WF_FILES = [
     "pyapp",
     "uv",
     "README.md",
+    "sayipa.py",
     "sayipa.sh",
     "search.sh",
     "setup.sh",

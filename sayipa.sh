@@ -1,14 +1,6 @@
 #!/bin/bash
 
-ipa=$1
-mp3_file="/tmp/ipa.mp3"
+set -euo pipefail
 
-curl 'https://iawll6of90.execute-api.us-east-1.amazonaws.com/production' \
-  -X POST \
-  --data-raw "{\"text\":\"$ipa\", \"voice\":\"Salli\"}" \
-  -o /tmp/b64ipa
-
-python3 -c "print($(cat /tmp/b64ipa))" | \
-  base64 --decode --input - -o "$mp3_file"
-
-afplay "$mp3_file"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+exec "$SCRIPT_DIR/uv" run --with boto3 "$SCRIPT_DIR/sayipa.py" "$@"
